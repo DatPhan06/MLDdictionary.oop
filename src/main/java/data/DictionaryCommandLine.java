@@ -66,6 +66,7 @@ class DictionaryCommandLine {
                         break;
                     case 7:
                         // Truy cập phần Game
+                        startGame();
                         break;
                     case 8:
                         // Nhập danh sách từ từ tệp
@@ -177,6 +178,31 @@ class DictionaryCommandLine {
         System.out.print("Enter the file path to export: ");
         String exportFilePath = scanner.nextLine();
         dictionaryManagement.dictionaryExportToFile(exportFilePath);
+    }
+
+    // Hàm chơi trò chơi
+    public void playGame() {
+        ArrayList<Word> words = dictionaryManagement.getDictionary().getAllWords();
+        int randomIndex = (int) (Math.random() * words.size());
+        Word randomWord = words.get(randomIndex);
+
+        System.out.println("Translate the following word to Vietnamese: " + randomWord.getWordTarget());
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Your answer: ");
+        String userAnswer = scanner.nextLine();
+
+        if (userAnswer.trim().equalsIgnoreCase(randomWord.getWordExplain())) {
+            System.out.println("Correct! Good job!");
+        } else {
+            System.out.println("Incorrect. The correct answer is: " + randomWord.getWordExplain());
+        }
+    }
+
+    // Hàm gọi trò chơi
+    public void startGame() {
+        System.out.println("Welcome to the Game!");
+        playGame();
     }
 
     // Chương trình chính
