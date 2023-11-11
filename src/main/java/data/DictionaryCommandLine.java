@@ -62,7 +62,7 @@ class DictionaryCommandLine {
                         break;
                     case 6:
                         // Tìm kiếm
-                        searchWord();
+                        dictionarySearcher();
                         break;
                     case 7:
                         // Truy cập phần Game
@@ -137,7 +137,7 @@ class DictionaryCommandLine {
         System.out.print("Enter the word to look up: ");
         String wordToLookup = scanner.nextLine();
 
-        Word foundWord = dictionaryManagement.lookupWord(wordToLookup.trim());
+        Word foundWord = dictionaryManagement.dictionaryLookup(wordToLookup.trim());
         if (foundWord != null) {
             System.out.println("Definition: " + foundWord.getWordExplain());
         } else {
@@ -146,7 +146,7 @@ class DictionaryCommandLine {
     }
 
     // Hàm tra từ
-    public void searchWord() {
+    public void dictionarySearcher() {
         System.out.print("Enter the search term: ");
         Scanner scanner = new Scanner(System.in);;
         String searchTerm = scanner.nextLine();
@@ -168,7 +168,7 @@ class DictionaryCommandLine {
         Scanner scanner = new Scanner(System.in);;
         System.out.print("Enter the file path to import: ");
         String importFilePath = scanner.nextLine();
-        dictionaryManagement.importFromFile(importFilePath);
+        dictionaryManagement.insertFromFile(importFilePath);
     }
 
     // Hàm xuất dữ liệu ra file
@@ -176,7 +176,7 @@ class DictionaryCommandLine {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the file path to export: ");
         String exportFilePath = scanner.nextLine();
-        dictionaryManagement.exportToFile(exportFilePath);
+        dictionaryManagement.dictionaryExportToFile(exportFilePath);
     }
 
     // Chương trình chính

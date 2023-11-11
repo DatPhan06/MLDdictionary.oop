@@ -66,7 +66,7 @@ class DictionaryManagement {
     }
 
     // Hàm tra từ
-    public Word lookupWord(String wordToLookup) {
+    public Word dictionaryLookup(String wordToLookup) {
         ArrayList<Word> words = dictionary.getAllWords();
 
         for (Word word : words) {
@@ -92,7 +92,7 @@ class DictionaryManagement {
     }
 
     // Hàm nhập từ tệp
-    public void importFromFile(String filePath) {
+    public void insertFromFile(String filePath) {
         try (Scanner fileScanner = new Scanner(new File(filePath))) {
             while (fileScanner.hasNextLine()) {
                 String line = fileScanner.nextLine();
@@ -109,7 +109,7 @@ class DictionaryManagement {
     }
 
     // Hàm xuất ra tệp
-    public void exportToFile(String filePath) {
+    public void dictionaryExportToFile(String filePath) {
         try (PrintWriter writer = new PrintWriter(filePath)) {
             ArrayList<Word> words = dictionary.getAllWords();
             for (Word word : words) {
