@@ -7,6 +7,8 @@
     <list default="true" id="3e785c23-0157-440b-a9d5-01518d109878" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/DictionaryCommandLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/DictionaryCommandLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/DictionaryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/DictionaryManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Word.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +90,7 @@
       <updated>1698680002179</updated>
       <workItem from="1699425948234" duration="31000" />
       <workItem from="1699425992581" duration="1651000" />
-      <workItem from="1699687115806" duration="633000" />
+      <workItem from="1699687115806" duration="4530000" />
     </task>
     <servers />
   </component>

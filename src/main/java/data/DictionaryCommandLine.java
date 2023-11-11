@@ -2,6 +2,7 @@ package data;
 
 // Press Shift twice to open the Search Everywhere dialog and type show whitespaces,
 // then press Enter. You can now see whitespace characters in your code.
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -45,9 +46,11 @@ class DictionaryCommandLine {
                         break;
                     case 2:
                         // Xóa từ
+                        removeWord();
                         break;
                     case 3:
                         // Sửa từ
+                        updateWord();
                         break;
                     case 4:
                         // Hiển thị danh sách từ
@@ -55,18 +58,22 @@ class DictionaryCommandLine {
                         break;
                     case 5:
                         // Tra cứu
+                        lookupWord();
                         break;
                     case 6:
                         // Tìm kiếm
+                        searchWord();
                         break;
                     case 7:
                         // Truy cập phần Game
                         break;
                     case 8:
                         // Nhập danh sách từ từ tệp
+                        importFromFile();
                         break;
                     case 9:
                         // Xuất dữ liệu danh sách từ ra tệp
+                        exportToFile();
                         break;
                     default:
                         System.out.println("Action not supported. Please enter a valid number (0-9).");
@@ -93,6 +100,83 @@ class DictionaryCommandLine {
             Word word = words.get(i);
             System.out.println((i + 1) + " | " + word.getWordTarget() + " | " + word.getWordExplain());
         }
+    }
+
+    // Hàm xóa từ
+    public void removeWord() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the word to remove: ");
+        String wordToRemove = scanner.nextLine();
+
+        if (dictionaryManagement.removeWord(wordToRemove.trim())) {
+            System.out.println("Word removed successfully!");
+        } else {
+            System.out.println("Word not found in the dictionary.");
+        }
+    }
+
+    // Hàm sửa từ
+    public void updateWord() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the word to update: ");
+        String wordToUpdate = scanner.nextLine();
+
+        System.out.print("Enter the new definition: ");
+        String newDefinition = scanner.nextLine();
+
+        if (dictionaryManagement.updateWord(wordToUpdate.trim(), newDefinition.trim())) {
+            System.out.println("Word updated successfully!");
+        } else {
+            System.out.println("Word not found in the dictionary.");
+        }
+    }
+
+    // Hàm check đúng từ
+    public void lookupWord() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the word to look up: ");
+        String wordToLookup = scanner.nextLine();
+
+        Word foundWord = dictionaryManagement.lookupWord(wordToLookup.trim());
+        if (foundWord != null) {
+            System.out.println("Definition: " + foundWord.getWordExplain());
+        } else {
+            System.out.println("Word not found in the dictionary.");
+        }
+    }
+
+    // Hàm tra từ
+    public void searchWord() {
+        System.out.print("Enter the search term: ");
+        Scanner scanner = new Scanner(System.in);;
+        String searchTerm = scanner.nextLine();
+        ArrayList<Word> matchingWords = dictionaryManagement.searchWords(searchTerm.trim());
+
+        if (!matchingWords.isEmpty()) {
+            System.out.println("Matching words:");
+            for (Word word : matchingWords) {
+                System.out.println("English: " + word.getWordTarget() + " | Vietnamese: " + word.getWordExplain());
+            }
+        } else {
+            System.out.println("No matching words found.");
+        }
+
+    }
+
+    // Hàm nhập dữ liệu từ file
+    public void importFromFile(){
+        Scanner scanner = new Scanner(System.in);;
+        System.out.print("Enter the file path to import: ");
+        String importFilePath = scanner.nextLine();
+        dictionaryManagement.importFromFile(importFilePath);
+    }
+
+    // Hàm xuất dữ liệu ra file
+    public void exportToFile(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the file path to export: ");
+        String exportFilePath = scanner.nextLine();
+        dictionaryManagement.exportToFile(exportFilePath);
     }
 
     // Chương trình chính
