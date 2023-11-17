@@ -91,12 +91,12 @@ public class DictionaryManagement {
         return matchingWords;
     }
 
-    // Hàm nhập từ tệp
+     // Hàm nhập từ tệp
     public void insertFromFile(String filePath) {
         try (Scanner fileScanner = new Scanner(new File(filePath))) {
             while (fileScanner.hasNextLine()) {
                 String line = fileScanner.nextLine();
-                String[] parts = line.split("\t"); // Giả sử từ và nghĩa được phân tách bằng dấu tab
+                String[] parts = line.split("\t\t"); // Giả sử từ và nghĩa được phân tách bằng dấu tab
                 if (parts.length == 2) {
                     Word word = new Word(parts[0], parts[1]);
                     dictionary.addWord(word);
@@ -107,6 +107,7 @@ public class DictionaryManagement {
             System.out.println("File not found.");
         }
     }
+
 
     // Hàm xuất ra tệp
     public void dictionaryExportToFile(String filePath) {
