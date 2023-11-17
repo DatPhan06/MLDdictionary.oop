@@ -1,4 +1,4 @@
-package controllers;
+package com.example.myjavafxapp.controller;
 
 public class SearchController {
     private int m = 10;

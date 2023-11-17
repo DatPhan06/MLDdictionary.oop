@@ -1,4 +1,4 @@
-package data;
+package com.example.myjavafxapp.model;
 
 import java.util.ArrayList;
 

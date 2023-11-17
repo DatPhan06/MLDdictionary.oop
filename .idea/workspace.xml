@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e785c23-0157-440b-a9d5-01518d109878" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/DictionaryCommandLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/DictionaryCommandLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/DictionaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/Dictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/DictionaryCommandLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/DictionaryCommandLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/DictionaryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/util/DictionaryManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/home-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/home-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEV.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,21 +50,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/MLDdictionary.oop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/MLDdictionary.oop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="data" />
@@ -64,7 +77,7 @@
       <module name="MyJavaFxApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.myjavafxapp.*" />
+          <option name="PATTERN" value="com.example.myjavafxapp.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,20 +111,22 @@
       <workItem from="1700191826753" duration="625000" />
       <workItem from="1700195196430" duration="6000" />
     </task>
+    <task id="LOCAL-00001" summary="Update file dictionary.txt and import file">
+      <option name="closed" value="true" />
+      <created>1700195716020</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700195716020</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update file dictionary.txt and import file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update file dictionary.txt and import file" />
   </component>
 </project>

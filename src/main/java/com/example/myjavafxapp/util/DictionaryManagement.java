@@ -1,4 +1,7 @@
-package data;
+package com.example.myjavafxapp.util;
+
+import com.example.myjavafxapp.model.Dictionary;
+import com.example.myjavafxapp.model.Word;
 
 import java.io.*;
 import java.io.FileNotFoundException;

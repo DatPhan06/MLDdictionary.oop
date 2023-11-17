@@ -1,4 +1,6 @@
-package data;
+package com.example.myjavafxapp.model;
+
+import com.example.myjavafxapp.util.DictionaryManagement;
 
 import java.util.ArrayList;
 import java.util.Random;

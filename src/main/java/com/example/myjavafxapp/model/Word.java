@@ -1,4 +1,4 @@
-package data;
+package com.example.myjavafxapp.model;
 
 public class Word {
     private final String word_target;    // từ vựng tiếng Anh

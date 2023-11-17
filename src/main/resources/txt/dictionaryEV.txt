@@ -549,7 +549,7 @@ danger		(n) sự nguy hiểm, mối hiểm nghèo; nguy cơ, mối đe dọa
 dangerous		(adj) nguy hiểm
 dare		(v) dám, dám đương đầu với; thách
 dark		(adj) (n) tối, tối tăm; bóng tối, ám muội
-data		(n) số liệu, dữ liệu
+com.example.myjavafxapp.model		(n) số liệu, dữ liệu
 date		(n) (v) ngày, kỳ, kỳ hạn, thời kỳ
 daughter		(n) con gái
 day		(n) ngày, ban ngày
