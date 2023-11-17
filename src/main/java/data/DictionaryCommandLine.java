@@ -13,6 +13,7 @@ public class DictionaryCommandLine {
     // Hàm chạy giao diện chính
     public void dictionaryAdvanced() {
         Scanner scanner = new Scanner(System.in);
+        dictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEV.txt");
 
         while (true) {
             System.out.println("Welcome to My Application!");
@@ -149,7 +150,7 @@ public class DictionaryCommandLine {
     // Hàm tra từ
     public void dictionarySearcher() {
         System.out.print("Enter the search term: ");
-        Scanner scanner = new Scanner(System.in);;
+        Scanner scanner = new Scanner(System.in);
         String searchTerm = scanner.nextLine();
         ArrayList<Word> matchingWords = dictionaryManagement.searchWords(searchTerm.trim());
 
@@ -166,7 +167,7 @@ public class DictionaryCommandLine {
 
     // Hàm nhập dữ liệu từ file
     public void importFromFile(){
-        Scanner scanner = new Scanner(System.in);;
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the file path to import: ");
         String importFilePath = scanner.nextLine();
         dictionaryManagement.insertFromFile(importFilePath);
