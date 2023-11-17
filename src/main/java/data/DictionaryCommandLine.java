@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
 
-class DictionaryCommandLine {
+public class DictionaryCommandLine {
     private final DictionaryManagement dictionaryManagement;
 
     // Hàm chạy giao diện chính

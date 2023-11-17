@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class DictionaryManagement {
+public class DictionaryManagement {
     private final Dictionary dictionary;
 
     public DictionaryManagement() {

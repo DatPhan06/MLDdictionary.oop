@@ -2,7 +2,7 @@ package data;
 
 import java.util.ArrayList;
 
-class Dictionary {
+public class Dictionary {
     private final ArrayList<Word> words;
 
     public Dictionary() {

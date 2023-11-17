@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e785c23-0157-440b-a9d5-01518d109878" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/Dictionary.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/DictionaryApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/DictionaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Dictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/DictionaryCommandLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/DictionaryCommandLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/DictionaryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/DictionaryManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/home-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +67,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.myjavafxapp.HelloApplication" />
+    <configuration name="DictionaryApplication" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.myjavafxapp.DictionaryApplication" />
       <module name="MyJavaFxApp" />
       <extension name="coverage">
         <pattern>
@@ -75,7 +82,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.DictionaryApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -90,7 +97,13 @@
       <workItem from="1699425948234" duration="31000" />
       <workItem from="1699425992581" duration="1651000" />
       <workItem from="1699687115806" duration="8679000" />
-      <workItem from="1699712231410" duration="1013000" />
+      <workItem from="1699712231410" duration="1621000" />
+      <workItem from="1699816719847" duration="99000" />
+      <workItem from="1699868315995" duration="587000" />
+      <workItem from="1700070765026" duration="2753000" />
+      <workItem from="1700142636843" duration="3892000" />
+      <workItem from="1700181763229" duration="1175000" />
+      <workItem from="1700191826753" duration="625000" />
     </task>
     <servers />
   </component>

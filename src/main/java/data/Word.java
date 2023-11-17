@@ -1,6 +1,6 @@
 package data;
 
-class Word {
+public class Word {
     private final String word_target;    // từ vựng tiếng Anh
     private String word_explain;   // giải nghĩa tiếng Việt
 
