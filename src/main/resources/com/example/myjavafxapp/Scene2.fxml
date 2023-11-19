@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox prefHeight="800" prefWidth="1280" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavafxapp.controller.Scene2Controller">
+
+        <VBox id="taskbar" spacing="10" prefWidth="200" prefHeight="600">
+                <Button layoutX="14.0" layoutY="161.0" onAction="#switchToScene1" text="Scene 1" />
+                <Button layoutX="14.0" layoutY="120.0" onAction="#switchToScene3" text="Scene 3" />
+                <Button layoutX="14.0" layoutY="200.0" onAction="#switchToScene4" text="Scene 4" />
+        </VBox>
+
+        <TextField fx:id="searchField" promptText="Enter search term" />
+        <Button onAction="#searchButtonAction" text="Search" />
+        <TextArea fx:id="resultTextArea" editable="false" />
+
+</HBox>

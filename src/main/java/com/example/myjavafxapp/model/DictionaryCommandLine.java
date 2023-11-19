@@ -10,11 +10,12 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class DictionaryCommandLine {
-    private final DictionaryManagement dictionaryManagement;
+    public DictionaryManagement dictionaryManagement;
 
     // Hàm chạy giao diện chính
     public void dictionaryAdvanced() {
         Scanner scanner = new Scanner(System.in);
+        // neu v thi chi hien o day thoi a?
         dictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEV.txt");
 
         while (true) {
@@ -61,7 +62,7 @@ public class DictionaryCommandLine {
                         break;
                     case 5:
                         // Tra cứu
-                        lookupWord();
+//                        lookupWord();
                         break;
                     case 6:
                         // Tìm kiếm
@@ -91,6 +92,7 @@ public class DictionaryCommandLine {
 
     // Hàm khởi tạo
     public DictionaryCommandLine() {
+
         dictionaryManagement = new DictionaryManagement();
     }
 
@@ -135,19 +137,31 @@ public class DictionaryCommandLine {
         }
     }
 
-    // Hàm check đúng từ
-    public void lookupWord() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the word to look up: ");
-        String wordToLookup = scanner.nextLine();
+     // Hàm check đúng từ
+//    public void lookupWord() {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter the word to look up: ");
+//        String wordToLookup = scanner.nextLine();
+//
+//        Word foundWord = dictionaryManagement.dictionaryLookup(wordToLookup.trim());
+//        if (foundWord != null) {
+//            System.out.println("Definition: " + foundWord.getWordExplain());
+//        } else {
+//            System.out.println("Word not found in the dictionary.");
+//        }
+//    }
 
+    // Modify the lookupWord() method to accept a search term as a parameter
+    public Word lookupWord(String wordToLookup) {
         Word foundWord = dictionaryManagement.dictionaryLookup(wordToLookup.trim());
         if (foundWord != null) {
-            System.out.println("Definition: " + foundWord.getWordExplain());
+            System.out.println("Vietnamese is " + foundWord.getWordExplain());
         } else {
             System.out.println("Word not found in the dictionary.");
         }
+        return foundWord;
     }
+
 
     // Hàm tra từ
     public void dictionarySearcher() {
