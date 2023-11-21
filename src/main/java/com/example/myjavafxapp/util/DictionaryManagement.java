@@ -99,7 +99,7 @@ public class DictionaryManagement {
         try (Scanner fileScanner = new Scanner(new File(filePath))) {
             while (fileScanner.hasNextLine()) {
                 String line = fileScanner.nextLine();
-                String[] parts = line.split("\t\t"); // Giả sử từ và nghĩa được phân tách bằng dấu tab
+                String[] parts = line.split("\t\t"); // Giả sử từ và nghĩa được phân tách bằng 2 dấu tab
                 if (parts.length == 2) {
                     Word word = new Word(parts[0], parts[1]);
                     dictionary.addWord(word);

@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Update_at_11_21_2023_4_10_PM_[Changes]" date="1700557855581" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_21_2023_4_10_PM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11/21/2023 4:10 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="src/main/java/db/slf4j-api-1.7.36.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_21_2023_4_10_PM_[Changes]/slf4j-api-1.7.36.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="src/main/java/db/sqlite-jdbc-3.44.0.0.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_21_2023_4_10_PM_[Changes]/sqlite-jdbc-3.44.0.0.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="src/main/resources/engData.db" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_21_2023_4_10_PM_[Changes]/engData.db" />
+  </binary>
+</changelist>

@@ -1,6 +1,7 @@
 package com.example.myjavafxapp;
 
 import com.example.myjavafxapp.controller.Scene1Controller;
+import com.example.myjavafxapp.sqlite.DatabaseManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,6 +13,16 @@ import java.io.IOException;
 public class DictionaryApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        DatabaseManager.createTable();
+
+        DatabaseManager.insertData("dog","n","chó","","","","");
+        DatabaseManager.insertData("cat","n","mèo","","","","");
+        DatabaseManager.insertData("bird","n","chim","","","","");
+
+        // Lấy và in ra dữ liệu
+        DatabaseManager.fetchData();
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene1.fxml"));
         Parent root = loader.load();
 

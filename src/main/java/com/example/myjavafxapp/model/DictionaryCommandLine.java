@@ -10,7 +10,11 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class DictionaryCommandLine {
-    public DictionaryManagement dictionaryManagement;
+    public static DictionaryManagement dictionaryManagement;
+
+    public static DictionaryManagement getDictionaryManagement() {
+        return dictionaryManagement;
+    }
 
     // Hàm chạy giao diện chính
     public void dictionaryAdvanced() {

@@ -2,6 +2,7 @@ package com.example.myjavafxapp.controller;
 
 import com.example.myjavafxapp.model.DictionaryCommandLine;
 import com.example.myjavafxapp.model.Word;
+import com.example.myjavafxapp.util.DictionaryManagement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class Scene2Controller {
     @FXML
@@ -26,7 +29,7 @@ public class Scene2Controller {
     @FXML
     private Stage primaryStage;
 
-    private DictionaryCommandLine dictionaryCommandLine;
+    private final DictionaryCommandLine dictionaryCommandLine;
 
     public Scene2Controller() {
         dictionaryCommandLine = new DictionaryCommandLine();
@@ -45,16 +48,34 @@ public class Scene2Controller {
         String result = performSearch(searchTerm);
         resultTextArea.setText(result);
     }
-//
+
+    //
     private String performSearch(String searchTerm) {
         // Logic tìm kiếm từ
-        Word foundWord = dictionaryCommandLine.lookupWord(searchTerm.trim());
-        if (foundWord != null) {
-            return "Definition: " + foundWord.getWordExplain();
+
+        // Lấy quản lý từ điển từ lớp DictionaryCommandLine
+        DictionaryManagement dictionaryManagement = DictionaryCommandLine.getDictionaryManagement();
+
+        // Thực hiện tìm kiếm các từ khớp với searchTerm
+        ArrayList<Word> matchingWords = dictionaryManagement.searchWords(searchTerm.trim());
+
+        // Tạo một StringBuilder để xây dựng kết quả tìm kiếm
+        StringBuilder result = new StringBuilder();
+
+        // Kiểm tra xem có từ nào khớp không
+        if (!matchingWords.isEmpty()) {
+            // Lặp qua danh sách các từ khớp và thêm thông tin vào StringBuilder
+            for (Word word : matchingWords) {
+                result.append("English: ").append(word.getWordTarget()).append(" | Vietnamese: ").append(word.getWordExplain()).append("\n");
+            }
+            // Trả về kết quả tìm kiếm
+            return result.toString();
         } else {
+            // Trả về thông báo khi từ không được tìm thấy trong từ điển
             return "Word not found in the dictionary.";
         }
     }
+
 
 
     public void switchToScene1(ActionEvent event) throws Exception {

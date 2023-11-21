@@ -3,6 +3,8 @@ module com.example.myjavafxapp {
     requires javafx.fxml;
 
     requires com.dlsc.formsfx;
+    requires java.sql;
+    requires org.xerial.sqlitejdbc;
 
     opens com.example.myjavafxapp to javafx.fxml;
     exports com.example.myjavafxapp;

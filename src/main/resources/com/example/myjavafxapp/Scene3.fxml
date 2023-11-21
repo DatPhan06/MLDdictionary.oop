@@ -35,33 +35,33 @@
         <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="233.0" text="Help" />
         <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="236.0" text="Exit " />
     </VBox>
-   <Pane prefHeight="800.0" prefWidth="35.0" />
-        <VBox prefHeight="200.0" prefWidth="900.0">
-            <children>
-                <Pane prefHeight="212.0" prefWidth="650.0">
-                    <children>
+    <Pane prefHeight="800.0" prefWidth="35.0" />
+    <VBox prefHeight="200.0" prefWidth="900.0">
+        <children>
+            <Pane prefHeight="212.0" prefWidth="650.0">
+                <children>
 
-                        <TextField fx:id="searchField" alignment="CENTER" layoutX="6.0" layoutY="161.0" prefHeight="39.0" prefWidth="120.0" promptText="Language 1" style="-fx-background-radius: 10;" />
-               <Button layoutX="773.0" layoutY="161.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="120.0" text="Translate" textFill="#e50b0b">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-               </Button>
-                    </children>
-                </Pane>
-                <TextArea fx:id="resultTextArea" editable="false" prefHeight="231.0" prefWidth="650.0" style="-fx-background-radius: 30;" text="&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;" />
-                <Pane prefHeight="90.0" prefWidth="650.0">
-            <children>
-               <Button layoutX="762.0" layoutY="27.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="131.0" text="Switch" textFill="#c71792">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-               </Button>
-               <TextField fx:id="searchField1" alignment="CENTER" layoutX="6.0" layoutY="42.0" prefHeight="39.0" prefWidth="120.0" promptText="Language 2" style="-fx-background-radius: 10;" />
-            </children></Pane>
-         <TextArea prefHeight="252.0" prefWidth="650.0" />
-         <Pane prefHeight="26.0" prefWidth="650.0" />
-            </children>
-        </VBox>
+                    <TextField fx:id="searchField" alignment="CENTER" layoutX="6.0" layoutY="161.0" prefHeight="39.0" prefWidth="120.0" promptText="Language 1" style="-fx-background-radius: 10;" />
+                    <Button layoutX="773.0" layoutY="161.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="120.0" text="Translate" textFill="#e50b0b">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Button>
+                </children>
+            </Pane>
+            <TextArea fx:id="resultTextArea" editable="false" prefHeight="231.0" prefWidth="650.0" style="-fx-background-radius: 30;" text="&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;" />
+            <Pane prefHeight="90.0" prefWidth="650.0">
+                <children>
+                    <Button layoutX="762.0" layoutY="27.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="131.0" text="Switch" textFill="#c71792">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Button>
+                    <TextField fx:id="searchField1" alignment="CENTER" layoutX="6.0" layoutY="42.0" prefHeight="39.0" prefWidth="120.0" promptText="Language 2" style="-fx-background-radius: 10;" />
+                </children></Pane>
+            <TextArea prefHeight="252.0" prefWidth="650.0" />
+            <Pane prefHeight="26.0" prefWidth="650.0" />
+        </children>
+    </VBox>
 
-    </HBox>
+</HBox>
