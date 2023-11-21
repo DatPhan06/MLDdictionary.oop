@@ -49,7 +49,7 @@ public class DictionaryCommandLine {
                         break;
                     case 1:
                         // Thêm từ
-                        dictionaryManagement.insertFromCommandLine();
+//                        dictionaryManagement.insertFromCommandLine();
                         System.out.println("Word added successfully!");
                         break;
                     case 2:

@@ -3,11 +3,13 @@ package com.example.myjavafxapp.util;
 import com.example.myjavafxapp.model.Dictionary;
 import com.example.myjavafxapp.model.Word;
 
-import java.io.*;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class DictionaryManagement {
     private final Dictionary dictionary;
@@ -21,24 +23,24 @@ public class DictionaryManagement {
     }
 
     // Hàm thêm từ mới từ commandline
-    public void insertFromCommandLine() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter the number of words: ");
-        int n = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline character
-
-        for (int i = 0; i < n; i++) {
-            System.out.print("Enter word in English: ");
-            String word_target = scanner.nextLine();
-
-            System.out.print("Enter Vietnamese meaning: ");
-            String word_explain = scanner.nextLine();
-
-            Word word = new Word(word_target, word_explain);
-            dictionary.addWord(word);
-        }
-    }
+//    public void insertFromCommandLine() {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter the number of words: ");
+//        int n = scanner.nextInt();
+//        scanner.nextLine(); // Consume the newline character
+//
+//        for (int i = 0; i < n; i++) {
+//            System.out.print("Enter word in English: ");
+//            String word_target = scanner.nextLine();
+//
+//            System.out.print("Enter Vietnamese meaning: ");
+//            String word_explain = scanner.nextLine();
+//
+//            Word word = new Word(word_target, word_explain);
+//            dictionary.addWord(word);
+//        }
+//    }
 
     // Hàm xóa từ
     public boolean removeWord(String wordToRemove) {
@@ -94,22 +96,53 @@ public class DictionaryManagement {
         return matchingWords;
     }
 
-     // Hàm nhập từ tệp
-    public void insertFromFile(String filePath) {
-        try (Scanner fileScanner = new Scanner(new File(filePath))) {
-            while (fileScanner.hasNextLine()) {
-                String line = fileScanner.nextLine();
-                String[] parts = line.split("\t\t"); // Giả sử từ và nghĩa được phân tách bằng 2 dấu tab
-                if (parts.length == 2) {
-                    Word word = new Word(parts[0], parts[1]);
-                    dictionary.addWord(word);
+    public void insertFromFile(String path) {
+
+        byte[] encoded = new byte[0];
+        try {
+            encoded = Files.readAllBytes(Paths.get(path));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        String textFromFile = new String(encoded, Charset.defaultCharset());
+        String[] words = textFromFile.split("@");
+        for (String word : words) {
+            String[] result = word.split("\r?\n", 2);
+            if (result.length > 1) {
+                String wordExplain = new String();
+                String wordTarget = new String();
+                String wordSound = new String();
+                if (result[0].contains("/")) {
+                    String firstMeaning = result[0].substring(0, result[0].indexOf("/"));
+                    String lastSoundMeaning = result[0].substring(result[0].indexOf("/"), result[0].length());
+                    wordTarget = firstMeaning;
+                    wordSound = lastSoundMeaning;
+                } else {
+                    wordTarget = result[0];
+                    wordSound = "";
                 }
+                wordExplain = result[1];
+                dictionary.addWord(new Word(wordTarget.trim(), wordExplain.trim(),  wordSound.trim()));
             }
-            System.out.println("Import successful!");
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found.");
         }
     }
+
+//     // Hàm nhập từ tệp
+//    public void insertFromFile(String filePath) {
+//        try (Scanner fileScanner = new Scanner(new File(filePath))) {
+//            while (fileScanner.hasNextLine()) {
+//                String line = fileScanner.nextLine();
+//                String[] parts = line.split("\t\t"); // Giả sử từ và nghĩa được phân tách bằng 2 dấu tab
+//                if (parts.length == 2) {
+//                    Word word = new Word(parts[0], parts[1]);
+//                    dictionary.addWord(word);
+//                }
+//            }
+//            System.out.println("Import successful!");
+//        } catch (FileNotFoundException e) {
+//            System.out.println("File not found.");
+//        }
+//    }
 
 
     // Hàm xuất ra tệp

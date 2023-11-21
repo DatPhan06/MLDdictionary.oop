@@ -51,6 +51,36 @@ public class Scene1Controller {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
     }
+//    public void switchToScene5(ActionEvent event) throws Exception {
+////        loadScene("Scene5.fxml");
+//        System.out.println("PrimaryStage before loading Scene5: " + primaryStage);
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/myjavafxapp/Scene5.fxml"));
+//        Parent root = loader.load();
+//
+//        Scene5Controller scene5Controller = loader.getController();
+//        scene5Controller.setPrimaryStage(primaryStage);
+//
+//        Scene scene = new Scene(root);
+//        primaryStage.setScene(scene);
+//    }
+//
+//    public void switchToScene6(ActionEvent event) throws Exception {
+////        loadScene("Scene6.fxml");
+//        System.out.println("PrimaryStage before loading Scene6: " + primaryStage);
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/myjavafxapp/Scene6.fxml"));
+//        Parent root = loader.load();
+//
+//        Scene6Controller scene6Controller = loader.getController();
+//        scene6Controller.setPrimaryStage(primaryStage);
+//
+//        Scene scene = new Scene(root);
+//        primaryStage.setScene(scene);
+//    }
+
+
+
+
+
 
 //    private void loadScene(String fxmlFileName) throws Exception {
 //        Parent root = FXMLLoader.load(getClass().getResource("/com/example/myjavafxapp/" + fxmlFileName));

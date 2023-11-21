@@ -13,8 +13,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
-
 public class Scene2Controller {
     @FXML
     private TextField searchField;
@@ -33,7 +31,7 @@ public class Scene2Controller {
 
     public Scene2Controller() {
         dictionaryCommandLine = new DictionaryCommandLine();
-        dictionaryCommandLine.dictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEV.txt");
+        dictionaryCommandLine.dictionaryManagement.insertFromFile("src/main/resources/txt/File-txt.txt");
     }
 
     // Phương thức để thiết lập primaryStage từ bên ngoài
@@ -58,17 +56,12 @@ public class Scene2Controller {
         DictionaryManagement dictionaryManagement = DictionaryCommandLine.getDictionaryManagement();
 
         // Thực hiện tìm kiếm các từ khớp với searchTerm
-        ArrayList<Word> matchingWords = dictionaryManagement.searchWords(searchTerm.trim());
+        Word result= dictionaryManagement.dictionaryLookup(searchTerm.trim());
 
-        // Tạo một StringBuilder để xây dựng kết quả tìm kiếm
-        StringBuilder result = new StringBuilder();
 
         // Kiểm tra xem có từ nào khớp không
-        if (!matchingWords.isEmpty()) {
-            // Lặp qua danh sách các từ khớp và thêm thông tin vào StringBuilder
-            for (Word word : matchingWords) {
-                result.append("English: ").append(word.getWordTarget()).append(" | Vietnamese: ").append(word.getWordExplain()).append("\n");
-            }
+        if (result != null) {
+
             // Trả về kết quả tìm kiếm
             return result.toString();
         } else {
