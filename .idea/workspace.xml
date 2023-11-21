@@ -5,31 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e785c23-0157-440b-a9d5-01518d109878" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene7Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene7.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene6.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene7.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphic/img/BackHelp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphic/img/BackHome.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphic/img/BackSearch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphic/img/BackTK1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphic/img/BackTK2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene5Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene6Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Thamkhao1.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Thamkhao2.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/txt/File-txt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_21_2023_4_10_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_21_2023_4_10_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_11_2023_12_18_CH__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_11_2023_12_18_CH__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/DictionaryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/DictionaryApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene1Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene2Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene3Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene3Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene4Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene4Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene5Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene5Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene6Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene6Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene1.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene3.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene4.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Thamkhao1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene5.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Thamkhao2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene6.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/img/Dictionary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/img/search-back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/DictionaryCommandLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/DictionaryCommandLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/util/DictionaryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/util/DictionaryManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/engData.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/engData.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -83,7 +73,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Github/MLDdictionary.oop/src/main/resources/graphic/img",
+    "last_opened_file_path": "D:/Github/MLDdictionary.oop/src/main/resources/txt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,7 +90,6 @@
       <recent name="data" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Github\MLDdictionary.oop\src\main\resources\graphic\img" />
       <recent name="D:\Github\MLDdictionary.oop\src\main\resources\txt" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">

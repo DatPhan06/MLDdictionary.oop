@@ -31,7 +31,7 @@ public class Scene2Controller {
 
     public Scene2Controller() {
         dictionaryCommandLine = new DictionaryCommandLine();
-        dictionaryCommandLine.dictionaryManagement.insertFromFile("src/main/resources/txt/File-txt.txt");
+        dictionaryCommandLine.dictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
     }
 
     // Phương thức để thiết lập primaryStage từ bên ngoài
@@ -44,12 +44,13 @@ public class Scene2Controller {
         // Logic khi nút search được nhấn
 
         String searchTerm = searchField.getText();
-        String result = performSearch(searchTerm);
-        resultTextArea.setText(result);
+        Word result = performSearch(searchTerm);
+        String resultvjppro = result.toString();
+        resultTextArea.setText(resultvjppro);
     }
 
     //
-    private String performSearch(String searchTerm) {
+    private Word performSearch(String searchTerm) {
         // Logic tìm kiếm từ
 
         // Lấy quản lý từ điển từ lớp DictionaryCommandLine
@@ -63,10 +64,10 @@ public class Scene2Controller {
         if (result != null) {
 
             // Trả về kết quả tìm kiếm
-            return result.toString();
+            return result;
         } else {
             // Trả về thông báo khi từ không được tìm thấy trong từ điển
-            return "Word not found in the dictionary.";
+            return null;
         }
     }
 
