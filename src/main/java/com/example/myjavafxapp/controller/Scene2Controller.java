@@ -44,6 +44,7 @@ public class Scene2Controller {
     @FXML
     private void searchButtonAction() {
         // Logic khi nút search được nhấn
+
         String searchTerm = searchField.getText();
         String result = performSearch(searchTerm);
         resultTextArea.setText(result);
@@ -75,7 +76,6 @@ public class Scene2Controller {
             return "Word not found in the dictionary.";
         }
     }
-
 
 
     public void switchToScene1(ActionEvent event) throws Exception {

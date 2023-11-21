@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.darkprograms.speech.translator.GoogleTranslate;
 
 import java.io.IOException;
 
@@ -16,12 +17,28 @@ public class DictionaryApplication extends Application {
 
         DatabaseManager.createTable();
 
-        DatabaseManager.insertData("dog","n","chó","","","","");
-        DatabaseManager.insertData("cat","n","mèo","","","","");
-        DatabaseManager.insertData("bird","n","chim","","","","");
+//        DatabaseManager.insertData("dog","n","chó","","","","");
+//        DatabaseManager.insertData("cat","n","mèo","","","","");
+//        DatabaseManager.insertData("bird","n","chim","","","","");
 
         // Lấy và in ra dữ liệu
-        DatabaseManager.fetchData();
+//        DatabaseManager.fetchData();
+
+        try {
+            //English to Vietnamese
+            System.out.println(GoogleTranslate.translate("vi", "how are you"));
+
+            //English to GREEK
+            System.out.println(GoogleTranslate.translate("vi", "hello brother"));
+
+            //English to HAUSA
+            System.out.println(GoogleTranslate.translate("vi", "play game"));
+
+            //English to Yoruba
+            System.out.println(GoogleTranslate.translate("vi", "english is very good"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene1.fxml"));
         Parent root = loader.load();
