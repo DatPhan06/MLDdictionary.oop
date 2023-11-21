@@ -1,0 +1,12 @@
+.root {
+    -fx-background-image: url('../img/BackTK2.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+Button {
+    -fx-background-color : rgba(0, 0, 0, 0);
+    -fx-color : rgb(105, 86, 86);
+    -fx-padding : 5px 10px;
+    -fx-cursor : pointer;
+    -fx-border-radius : 20px;
+}

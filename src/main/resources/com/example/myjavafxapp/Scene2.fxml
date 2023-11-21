@@ -38,10 +38,10 @@
             </font>
         </Button>
         <Pane prefHeight="88.0" prefWidth="255.0"/>
-        <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="254.0" text="Tham khảo 1"/>
-        <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="254.0" text="Tham khảo 2"/>
-        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="233.0" text="Help"/>
-        <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="236.0" text="Exit "/>
+        <Button mnemonicParsing="false" onAction="#switchToScene5" prefHeight="52.0" prefWidth="254.0" text="Tham khảo 1" />
+        <Button mnemonicParsing="false" onAction="#switchToScene6" prefHeight="43.0" prefWidth="254.0" text="Tham khảo 2" />
+        <Button mnemonicParsing="false" onAction="#switchToScene7" prefHeight="50.0" prefWidth="233.0" text="Help" />
+        <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="236.0" text="Exit " />
     </VBox>
     <Pane prefHeight="800.0" prefWidth="35.0"/>
     <VBox prefHeight="200.0" prefWidth="900.0">

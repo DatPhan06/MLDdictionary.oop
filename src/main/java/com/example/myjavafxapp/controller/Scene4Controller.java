@@ -26,6 +26,15 @@ public class Scene4Controller {
     public void switchToScene3(ActionEvent event) throws Exception {
         loadScene("Scene3.fxml");
     }
+    public void switchToScene5(ActionEvent event) throws Exception {
+        loadScene("Scene5.fxml");
+    }
+    public void switchToScene6(ActionEvent event) throws Exception {
+        loadScene("Scene6.fxml");
+    }
+    public void switchToScene7(ActionEvent event) throws Exception {
+        loadScene("Scene7.fxml");
+    }
 
     private void loadScene(String fxmlFileName) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/myjavafxapp/" + fxmlFileName));
@@ -41,6 +50,12 @@ public class Scene4Controller {
             ((Scene3Controller) controller).setPrimaryStage(primaryStage);
         } else if (controller instanceof Scene4Controller) {
             ((Scene4Controller) controller).setPrimaryStage(primaryStage);
+        } else if (controller instanceof Scene5Controller) {
+            ((Scene5Controller) controller).setPrimaryStage(primaryStage);
+        } else if (controller instanceof Scene6Controller) {
+            ((Scene6Controller) controller).setPrimaryStage(primaryStage);
+        } else if (controller instanceof Scene7Controller) {
+            ((Scene7Controller) controller).setPrimaryStage(primaryStage);
         }
 
         Scene scene = new Scene(root);

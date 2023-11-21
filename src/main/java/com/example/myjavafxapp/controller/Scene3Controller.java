@@ -1,5 +1,6 @@
 package com.example.myjavafxapp.controller;
 
+import com.darkprograms.speech.translator.GoogleTranslate;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
-import com.darkprograms.speech.translator.GoogleTranslate;
 
 import java.io.IOException;
 
@@ -60,6 +60,15 @@ public class Scene3Controller {
     public void switchToScene4(ActionEvent event) throws Exception {
         loadScene("Scene4.fxml");
     }
+    public void switchToScene5(ActionEvent event) throws Exception {
+        loadScene("Scene5.fxml");
+    }
+    public void switchToScene6(ActionEvent event) throws Exception {
+        loadScene("Scene6.fxml");
+    }
+    public void switchToScene7(ActionEvent event) throws Exception {
+        loadScene("Scene7.fxml");
+    }
 
     private void loadScene(String fxmlFileName) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/myjavafxapp/" + fxmlFileName));
@@ -75,6 +84,12 @@ public class Scene3Controller {
             ((Scene3Controller) controller).setPrimaryStage(primaryStage);
         } else if (controller instanceof Scene4Controller) {
             ((Scene4Controller) controller).setPrimaryStage(primaryStage);
+        } else if (controller instanceof Scene5Controller) {
+            ((Scene5Controller) controller).setPrimaryStage(primaryStage);
+        } else if (controller instanceof Scene6Controller) {
+            ((Scene6Controller) controller).setPrimaryStage(primaryStage);
+        } else if (controller instanceof Scene7Controller) {
+            ((Scene7Controller) controller).setPrimaryStage(primaryStage);
         }
 
         Scene scene = new Scene(root);
