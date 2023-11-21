@@ -19,6 +19,7 @@ public class DictionaryApplication extends Application {
         scene1Controller.setPrimaryStage(primaryStage);
 
         Scene scene = new Scene(root);
+        primaryStage.setResizable(false); // Thiết lập cố định cửa sổ
 //      scene.getStylesheets().add(getClass().getResource("/graphic/css/scene1.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.setTitle("Scene");

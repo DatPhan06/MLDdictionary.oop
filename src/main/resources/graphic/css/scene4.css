@@ -1,0 +1,31 @@
+.root {
+    -fx-background-image: url('../img/BackGame.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.class-btn {
+ -fx-background-color: transparent;
+
+}
+Button {
+    -fx-background-color : rgba(0, 0, 0, 0);
+    -fx-color : rgb(105, 86, 86);
+    -fx-padding : 5px 10px;
+    -fx-cursor : pointer;
+    -fx-border-radius : 20px;
+}
+TextField {
+    -fx-background-color : rgba(0, 0, 0, 0);
+    -fx-color : rgb(105, 86, 86);
+    -fx-padding : 5px 10px;
+    -fx-cursor : pointer;
+    -fx-border-radius : 20px;
+}
+
+TextArea {
+    -fx-background-color : rgba(0, 0, 11, 0);
+    -fx-color : rgb(105, 86, 86);
+    -fx-padding : 5px 10px;
+    -fx-cursor : pointer;
+    -fx-border-radius : 20px;
+}
