@@ -10,13 +10,13 @@
     <VBox id="taskbar" prefHeight="800.0" prefWidth="255.0" spacing="10">
         <Pane prefHeight="182.0" prefWidth="200.0" />
 
-        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" text="Home">
+        <Button mnemonicParsing="false" onAction="#switchToScene1" prefHeight="50.0" prefWidth="250.0" text="Home">
             <font>
                 <Font size="14.0" />
             </font>
         </Button>
 
-        <Button layoutX="14.0" layoutY="161.0" onAction="#switchToScene2" prefHeight="50.0" prefWidth="250.0" text="Search">
+        <Button layoutX="14.0" layoutY="161.0" onAction="#switchToScene2" prefHeight="50.0" prefWidth="250.0" styleClass="class-button" text="Search">
             <font>
                 <Font size="14.0" />
             </font>

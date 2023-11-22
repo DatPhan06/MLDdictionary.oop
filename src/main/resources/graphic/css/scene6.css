@@ -3,10 +3,22 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }
+.class-btn {
+ -fx-background-color: transparent;
+}
+
 Button {
     -fx-background-color : rgba(0, 0, 0, 0);
-    -fx-color : rgb(105, 86, 86);
     -fx-padding : 5px 10px;
     -fx-cursor : pointer;
     -fx-border-radius : 20px;
 }
+.class-button-color {
+ -fx-font-size: 14px;
+ -fx-text-fill: #ae0f9f
+ }
+
+.class-button {
+ -fx-font-size: 14px;
+ -fx-text-fill: #f4efef
+ }
