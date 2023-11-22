@@ -73,6 +73,12 @@
             <version>8.0.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>javazoom</groupId>
+            <artifactId>jlayer</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
 
 
     </dependencies>
