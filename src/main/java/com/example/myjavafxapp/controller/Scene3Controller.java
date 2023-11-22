@@ -1,6 +1,7 @@
 package com.example.myjavafxapp.controller;
 
-import com.darkprograms.speech.translator.GoogleTranslate;
+import com.example.myjavafxapp.translator.GoogleTranslate;
+import com.example.myjavafxapp.translator.Translate;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -35,7 +36,7 @@ public class Scene3Controller {
         // Logic khi nút translate được nhấn
 
         String searchTerm = inputTextArea.getText();
-        String result = GoogleTranslate.translate("vi", searchTerm);
+        String result = Translate.translate("vi", searchTerm);
 
 //        String result = performTranslate(searchTerm);
 

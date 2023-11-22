@@ -14,12 +14,7 @@
         <junit.version>5.9.2</junit.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
+
 
     <dependencies>
         <dependency>
@@ -67,18 +62,24 @@
             <version>3.44.0.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.github.goxr3plus</groupId>
-            <artifactId>java-google-speech-api</artifactId>
-            <version>8.0.0</version>
-        </dependency>
+
 
         <dependency>
             <groupId>javazoom</groupId>
             <artifactId>jlayer</artifactId>
             <version>1.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20150729</version>
+        </dependency>
 
 
     </dependencies>

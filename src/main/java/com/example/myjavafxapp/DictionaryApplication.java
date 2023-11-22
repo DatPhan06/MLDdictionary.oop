@@ -2,7 +2,7 @@ package com.example.myjavafxapp;
 
 import com.example.myjavafxapp.controller.Scene1Controller;
 import com.example.myjavafxapp.sqlite.DatabaseManager;
-import com.example.myjavafxapp.util.SpeechAPI;
+//import com.example.myjavafxapp.util.SpeechAPI;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,8 +14,8 @@ public class DictionaryApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         DatabaseManager.createTable();
-        SpeechAPI speechAPI =  new SpeechAPI();
-        speechAPI.speak("Welcome to MLD Dictionary!");
+//        SpeechAPI speechAPI =  new SpeechAPI();
+//        speechAPI.speak("Welcome to MLD Dictionary!");
 
 //        DatabaseManager.insertData("dog","n","chó","","","","");
 //        DatabaseManager.insertData("cat","n","mèo","","","","");
