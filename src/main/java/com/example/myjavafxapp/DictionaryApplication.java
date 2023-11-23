@@ -1,6 +1,7 @@
 package com.example.myjavafxapp;
 
 import com.example.myjavafxapp.controller.Scene1Controller;
+import com.example.myjavafxapp.speechAPI.SpeechAPI;
 import com.example.myjavafxapp.sqlite.DatabaseManager;
 import com.example.myjavafxapp.util.DictionaryManagement;
 import javafx.application.Application;
@@ -53,8 +54,8 @@ public class DictionaryApplication extends Application {
     }
 
     public static void main(String[] args) {
-        // Lấy và in ra dữ liệu
-
+        SpeechAPI speechAPI =  new SpeechAPI();
+        speechAPI.speak("en","Welcome to MLD dictionary");
         try {
             DictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
             System.out.println("Import dictionary sucessfully. \n");

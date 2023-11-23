@@ -4,7 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * Lớp CreateToken cung cấp phương thức để tạo token sử dụng trong các yêu cầu của Google Translate.
+ */
 public class CreateToken {
+
+    /**
+     * Tạo một token cho văn bản được chỉ định sử dụng thuật toán Google Translate.
+     *
+     * @param text Văn bản cho mà token được tạo.
+     * @return Token được tạo.
+     */
     static String createToken(String text) {
         int[] tkk = TKK();
         int b = tkk[0];
@@ -49,10 +59,22 @@ public class CreateToken {
         return String.format(Locale.US, "%d.%d", a_l, a_l ^ b);
     }
 
+    /**
+     * Lấy giá trị TKK sử dụng trong thuật toán tạo token.
+     *
+     * @return Mảng chứa giá trị TKK.
+     */
     private static int[] TKK() {
         return new int[]{0x6337E, 0x217A58DC + 0x5AF91132};
     }
 
+    /**
+     * Dịch phải 32 bit cho một số nguyên.
+     *
+     * @param x    Số nguyên cần dịch phải.
+     * @param bits Số bit dịch phải.
+     * @return Số nguyên sau khi dịch phải.
+     */
     private static int shr32(int x, int bits) {
         if (x < 0) {
             long xL = 0xffffffffL + x + 1;
@@ -61,6 +83,13 @@ public class CreateToken {
         return x >> bits;
     }
 
+    /**
+     * Hàm thực hiện việc xoay vòng bit trái theo chuỗi b.
+     *
+     * @param a Số nguyên cần thực hiện xoay bit.
+     * @param b Chuỗi chứa thông tin về cách thực hiện xoay bit.
+     * @return Số nguyên sau khi thực hiện xoay bit.
+     */
     private static int RL(int a, String b) {
         for (int c = 0; c < b.length() - 2; c += 3) {
             int d = b.charAt(c + 2);

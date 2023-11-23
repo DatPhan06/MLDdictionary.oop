@@ -2,16 +2,26 @@ package com.example.myjavafxapp.sqlite;
 
 import java.sql.*;
 
+/**
+ * Lớp quản lý cơ sở dữ liệu SQLite cho ứng dụng từ điển.
+ */
 public class DatabaseManager {
 
+    /**
+     * Kết nối đến cơ sở dữ liệu SQLite.
+     */
     private static final Connection connection = SQLiteConnector.connect();
 
-
-
-    public DatabaseManager() throws SQLException {
+    /**
+     * Hàm tạo của lớp DatabaseManager.
+     *
+     */
+    public DatabaseManager() {
     }
 
-
+    /**
+     * Tạo bảng English trong cơ sở dữ liệu nếu nó chưa tồn tại.
+     */
     public static void createTable() {
         try {
             String sql = "CREATE TABLE IF NOT EXISTS English (Id INTEGER PRIMARY KEY, Word varchar(255), Type varchar(255), Meaning varchar(255), Pronunciation varchar(255), Example varchar(255), Synonym varchar(255), Antonyms varchar(255));";
@@ -22,6 +32,18 @@ public class DatabaseManager {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Chèn dữ liệu mới vào bảng English trong cơ sở dữ liệu.
+     *
+     * @param word         Từ vựng.
+     * @param type         Loại từ.
+     * @param meaning      Ý nghĩa.
+     * @param pronunciation Phát âm.
+     * @param example      Ví dụ.
+     * @param synonym      Từ đồng nghĩa.
+     * @param antonyms     Từ trái nghĩa.
+     */
     public static void insertData(String word, String type, String meaning, String pronunciation, String example, String synonym, String antonyms) {
         try {
             String sql = "INSERT INTO English (Word, Type, Meaning, Pronunciation, Example, Synonym, Antonyms) VALUES (?, ?, ?, ?, ?, ?, ?);";
@@ -41,7 +63,12 @@ public class DatabaseManager {
         }
     }
 
-
+    /**
+     * Tìm kiếm từ trong bảng English và trả về thông tin chi tiết nếu tìm thấy.
+     *
+     * @param wordSearch Từ cần tìm kiếm.
+     * @return Thông tin chi tiết về từ nếu tìm thấy, ngược lại trả về null.
+     */
     public static String searchWord(String wordSearch) {
         try {
             StringBuilder resultBuilder = new StringBuilder();
@@ -78,6 +105,7 @@ public class DatabaseManager {
             e.printStackTrace();
         }
         return null;
+
 //            sql = sql + wordSearch;
 //            try (PreparedStatement statement = connection.prepareStatement(sql)) {
 //                try (ResultSet resultSet = statement.executeQuery()) {

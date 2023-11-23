@@ -7,10 +7,13 @@ import java.sql.SQLException;
 public class SQLiteConnector {
 
     public static Connection connect() {
-        try {
-            Class.forName("org.sqlite.JDBC");
-            Connection connection = DriverManager.getConnection("jdbc:sqlite:src/main/resources/engData.db");
 
+        String csvFile = "src/main/resources/csv/E-Edictionary.csv"; // Đường dẫn tới file CSV
+        String jdbcUrl = "jdbc:sqlite:src/main/resources/engData.db"; // Đường dẫn tới cơ sở dữ liệu SQLite
+        try {
+
+            Class.forName("org.sqlite.JDBC");
+            Connection connection = DriverManager.getConnection(jdbcUrl);
             System.out.println("Kết nối database thành công.");
             return connection;
 

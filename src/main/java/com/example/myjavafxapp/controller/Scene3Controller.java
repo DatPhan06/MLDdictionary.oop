@@ -1,5 +1,6 @@
 package com.example.myjavafxapp.controller;
 
+import com.example.myjavafxapp.speechAPI.SpeechAPI;
 import com.example.myjavafxapp.translator.Translate;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -43,17 +44,59 @@ public class Scene3Controller {
         String searchTerm = inputTextArea.getText();
         String result;
         String languageChoice = handleChoiceBoxAction();
-
-        if (languageChoice == null){
-        result = Translate.translate("vi", searchTerm);}
-        else {
-            languageChoice = languageChoice.substring(0,2);
-            result = Translate.translate(languageChoice, searchTerm);
+        if (languageChoice == null) {
+            languageChoice = "Vietnam vi";
         }
+//        SpeechAPI speechAPI = new SpeechAPI();
 
+        // Tìm vị trí của dấu cách cuối cùng
+        int lastIndex = languageChoice.lastIndexOf(' ');
+        String result1 = "vi";
+        // Kiểm tra xem có dấu cách không
+        if (lastIndex != -1) {
+            // Lấy ra phần tử từ vị trí sau dấu cách cuối cùng đến hết chuỗi
+            result1 = languageChoice.substring(lastIndex + 1);
+        } else {
+            // Nếu không có dấu cách, in ra chuỗi gốc
+            System.out.println(languageChoice);
+        }
+            result = Translate.translate(result1, searchTerm);
+//            speechAPI.speak(result1, result);
+            
 //        String result = performTranslate(searchTerm);
 
         resultTextArea.setText(result);
+    }
+
+    @FXML
+    private void SpeechAction() throws IOException {
+
+        String textresult = resultTextArea.getText();
+
+        String languageChoice = handleChoiceBoxAction();
+        if (languageChoice == null) {
+            languageChoice = "Vietnam vi";
+        }
+        SpeechAPI speechAPI = new SpeechAPI();
+
+        // Tìm vị trí của dấu cách cuối cùng
+        String result1 = "vi";
+        int lastIndex = languageChoice.lastIndexOf(' ');
+
+        // Kiểm tra xem có dấu cách không
+        if (lastIndex != -1) {
+            // Lấy ra phần tử từ vị trí sau dấu cách cuối cùng đến hết chuỗi
+            result1 = languageChoice.substring(lastIndex + 1);
+            System.out.println(languageChoice);
+        } else {
+            // Nếu không có dấu cách, in ra chuỗi gốc
+            System.out.println(languageChoice.substring(languageChoice.length()-2));
+        }
+        speechAPI.speak(result1, textresult);
+
+//        String result = performTranslate(searchTerm);
+
+
     }
 
     @FXML
@@ -82,12 +125,15 @@ public class Scene3Controller {
     public void switchToScene4(ActionEvent event) throws Exception {
         loadScene("Scene4.fxml");
     }
+
     public void switchToScene5(ActionEvent event) throws Exception {
         loadScene("Scene5.fxml");
     }
+
     public void switchToScene6(ActionEvent event) throws Exception {
         loadScene("Scene6.fxml");
     }
+
     public void switchToScene7(ActionEvent event) throws Exception {
         loadScene("Scene7.fxml");
     }

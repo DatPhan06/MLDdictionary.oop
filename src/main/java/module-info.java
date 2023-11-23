@@ -7,6 +7,8 @@ module com.example.myjavafxapp {
     requires org.xerial.sqlitejdbc;
 //    requires java.google.speech.api;
     requires json;
+    requires jlayer;
+    requires com.opencsv;
 
     opens com.example.myjavafxapp to javafx.fxml;
     exports com.example.myjavafxapp;
