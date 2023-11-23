@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e785c23-0157-440b-a9d5-01518d109878" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_2023_4_36_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_2023_4_36_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2023_6_08_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2023_6_08_pm__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene4.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVplus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVplus.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +124,7 @@
       <workItem from="1700195196430" duration="6000" />
       <workItem from="1700558094095" duration="3272000" />
       <workItem from="1700573721965" duration="9646000" />
+      <workItem from="1700749038891" duration="350000" />
     </task>
     <task id="LOCAL-00001" summary="Update file dictionary.txt and import file">
       <option name="closed" value="true" />
