@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e785c23-0157-440b-a9d5-01518d109878" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVout.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_2023_11_01_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_2023_11_01_pm__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_2023_4_36_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_2023_4_36_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/DictionaryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/DictionaryApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene1Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene2Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene4Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene4Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/WordGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/WordGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/Dictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/DictionaryCommandLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/DictionaryCommandLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/Word.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/translator/Translate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/translator/Translate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/util/DictionaryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/util/DictionaryManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVplus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVplus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene4.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVout.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +62,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Phan Tien Dat/.m2/repository/com/github/goxr3plus/java-google-speech-api/8.0.0/java-google-speech-api-8.0.0.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Github/MLDdictionary.oop/src/main/resources/graphic/img&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -89,10 +78,10 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="data" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.myjavafxapp" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Github\MLDdictionary.oop\src\main\resources\graphic\img" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.myjavafxapp" />
     </key>
   </component>
@@ -137,7 +126,6 @@
       <workItem from="1700195196430" duration="6000" />
       <workItem from="1700558094095" duration="3272000" />
       <workItem from="1700573721965" duration="9646000" />
-      <workItem from="1700734284766" duration="3014000" />
     </task>
     <task id="LOCAL-00001" summary="Update file dictionary.txt and import file">
       <option name="closed" value="true" />
