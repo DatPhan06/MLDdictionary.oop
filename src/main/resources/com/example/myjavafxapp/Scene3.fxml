@@ -68,10 +68,58 @@
                     <ChoiceBox fx:id="yourChoiceBox" layoutX="6.0" layoutY="32.0" prefHeight="40.0" prefWidth="203.0" style="-fx-background-radius: 20;">
                         <items>
                             <FXCollections fx:factory="observableArrayList">
-                                <String fx:value="Option 1" />
-                                <String fx:value="Option 2" />
-                                <String fx:value="Option 3" />
-                                <String fx:value="Option 4" />
+                                <String fx:value="Afrikaans" />
+                                <String fx:value="Albanian" />
+                                <String fx:value="Amharic" />
+                                <String fx:value="Arabic" />
+                                <String fx:value="Armenian" />
+                                <String fx:value="Azerbaijani" />
+                                <String fx:value="Basque" />
+                                <String fx:value="Belarusian" />
+                                <String fx:value="Bengali" />
+                                <String fx:value="Bosnian" />
+                                <String fx:value="Bulgarian" />
+                                <String fx:value="Catalan" />
+                                <String fx:value="Cebuano" />
+                                <String fx:value="Chinese" />
+                                <String fx:value="Corsican" />
+                                <String fx:value="Croatian" />
+                                <String fx:value="Czech" />
+                                <String fx:value="Danish" />
+                                <String fx:value="Dutch" />
+                                <String fx:value="English" />
+                                <String fx:value="Esperanto" />
+                                <String fx:value="Estonian" />
+                                <String fx:value="Finnish" />
+                                <String fx:value="French" />
+                                <String fx:value="Frisian" />
+                                <String fx:value="Galician" />
+                                <String fx:value="Georgian" />
+                                <String fx:value="German" />
+                                <String fx:value="Greek" />
+                                <String fx:value="Gujarati" />
+                                <String fx:value="Hausa" />
+                                <String fx:value="Hawaiian" />
+                                <String fx:value="Hebrew" />
+                                <String fx:value="Hindi" />
+                                <String fx:value="Hmong" />
+                                <String fx:value="Hungarian" />
+                                <String fx:value="Icelandic" />
+                                <String fx:value="Igbo" />
+                                <String fx:value="Indonesian" />
+                                <String fx:value="Irish" />
+                                <String fx:value="Italian" />
+                                <String fx:value="Japanese" />
+                                <String fx:value="Javanese" />
+                                <String fx:value="Kannada" />
+                                <String fx:value="Kazakh" />
+                                <String fx:value="Khmer" />
+                                <String fx:value="Kinyarwanda" />
+                                <String fx:value="Korean" />
+                                <String fx:value="Kurdish" />
+                                <String fx:value="Kyrgyz" />
+
+
                                 <!-- Add more options as needed -->
                             </FXCollections>
                         </items>

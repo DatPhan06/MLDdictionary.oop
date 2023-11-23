@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e785c23-0157-440b-a9d5-01518d109878" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_2023_5_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_2023_5_02_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene1.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene2.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene3.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene4.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene5.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene5.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene6.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene6.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene7.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene7.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene2.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene3.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene4.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene4.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene5.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene5.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene6.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene6.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene7.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene7.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
