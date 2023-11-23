@@ -204,12 +204,22 @@ public class DictionaryCommandLine {
     // Hàm chơi trò chơi
 
     // Hàm gọi trò chơi
+//    public void startGame() {
+//        System.out.println("Welcome to the Game!");
+//        System.out.print("Choose the number of questions: ");
+//        Scanner scanner = new Scanner(System.in);
+//        int numberOfQuestions = scanner.nextInt();
+//        Game game = new Game(dictionaryManagement);
+//        game.playGame(numberOfQuestions);
+//    }
+
     public void startGame() {
-        System.out.println("Welcome to the Game!");
-        System.out.print("Choose the number of questions: ");
+        System.out.println("Chào mừng bạn đến với Trò chơi!");
+        System.out.print("Chọn số lượng câu hỏi: ");
         Scanner scanner = new Scanner(System.in);
         int numberOfQuestions = scanner.nextInt();
-        Game game = new Game(dictionaryManagement);
+        scanner.nextLine(); // Để loại bỏ ký tự newline sau khi nhập số
+        WordGame game = new WordGame(dictionaryManagement);
         game.playGame(numberOfQuestions);
     }
 

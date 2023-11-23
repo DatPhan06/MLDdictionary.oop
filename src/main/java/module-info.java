@@ -5,13 +5,11 @@ module com.example.myjavafxapp {
     requires com.dlsc.formsfx;
     requires java.sql;
     requires org.xerial.sqlitejdbc;
-    requires jlayer;
+//    requires java.google.speech.api;
     requires json;
 
     opens com.example.myjavafxapp to javafx.fxml;
     exports com.example.myjavafxapp;
     exports com.example.myjavafxapp.controller;
     opens com.example.myjavafxapp.controller to javafx.fxml;
-    exports com.example.myjavafxapp.util;
-    opens com.example.myjavafxapp.util to javafx.fxml;
 }

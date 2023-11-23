@@ -1,0 +1,25 @@
+.vbox {
+    -fx-padding: 20;
+    -fx-background-color: #f4f4f4;
+}
+
+.wordLabel, .resultLabel, .timeLabel {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.radioButton {
+    -fx-font-size: 14px;
+}
+
+.checkButton {
+    -fx-background-color: #7892c2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+}
+
+.checkButton:hover {
+    -fx-background-color: #425990;
+}
+

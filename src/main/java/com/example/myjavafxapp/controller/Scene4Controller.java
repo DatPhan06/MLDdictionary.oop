@@ -6,13 +6,49 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.example.myjavafxapp.util.DictionaryManagement;
+
+import java.io.IOException;
 
 public class Scene4Controller {
     @FXML
     private Stage primaryStage;
 
+//    private DictionaryManagement dictionaryManagement;
+
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
+    }
+
+//    public void setDictionaryManagement(DictionaryManagement dictionaryManagement) {
+//        this.dictionaryManagement = dictionaryManagement; // Đặt đối tượng dictionaryManagement
+//    }
+
+    public void startWordGame(ActionEvent event) {
+        try {
+
+//            // Khởi tạo dictionaryManagement ở đây
+//            DictionaryManagement dictionaryManagement = new DictionaryManagement();
+//            dictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/myjavafxapp/WordGame.fxml"));
+            Parent wordGameRoot = loader.load();
+
+            // Truyền primaryStage cho WordGameController
+            WordGameController wordGameController = loader.getController();
+            wordGameController.setPrimaryStage(primaryStage);
+
+//            // Pass dictionaryManagement to WordGameController
+//            WordGameController wordGameController = loader.getController();
+//            wordGameController.setDictionaryManagement(dictionaryManagement);
+
+            Scene scene = new Scene(wordGameRoot);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Xử lý ngoại lệ, có thể hiển thị thông báo lỗi cho người dùng.
+        }
     }
 
     public void switchToScene1(ActionEvent event) throws Exception {

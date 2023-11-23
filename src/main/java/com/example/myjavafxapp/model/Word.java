@@ -7,6 +7,7 @@ public class Word {
     private String wordTarget;
     private String wordExplain;
 
+
     private String wordSound;
 
     public Word(String wordTarget, String wordExplain) {
@@ -25,6 +26,7 @@ public class Word {
         this.wordExplain = "";
         this.wordSound = "";
     }
+
 
 
     public String getWordTarget() {
