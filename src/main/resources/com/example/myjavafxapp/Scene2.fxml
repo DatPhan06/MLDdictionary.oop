@@ -58,9 +58,9 @@
                <content>
                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="168.0" prefWidth="900.0">
                         <children>
-                           <TextField layoutY="1.0" prefHeight="39.0" prefWidth="364.0" />
-                           <TextField layoutX="-3.0" layoutY="40.0" prefHeight="43.0" prefWidth="370.0" />
-                           <TextArea fx:id="resultTextArea" layoutY="122.0" prefHeight="100.0" prefWidth="900.0" />
+                           <TextField fx:id="wordTargetArea" layoutY="1.0" prefHeight="39.0" prefWidth="364.0" />
+                           <TextField fx:id="wordSoundArea" layoutX="-3.0" layoutY="40.0" prefHeight="43.0" prefWidth="370.0" />
+                           <TextArea fx:id="wordExplainArea" layoutY="122.0" prefHeight="100.0" prefWidth="900.0" />
                         </children>
                      </AnchorPane>
                </content>
@@ -69,7 +69,8 @@
                <content>
                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="243.0" prefWidth="900.0">
                         <children>
-                           <TextArea prefHeight="218.0" prefWidth="900.0" />
+
+                           <TextArea fx:id="resultArea" prefHeight="218.0" prefWidth="900.0" />
                         </children>
                      </AnchorPane>
                </content>

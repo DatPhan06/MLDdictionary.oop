@@ -2,6 +2,7 @@ package com.example.myjavafxapp.controller;
 
 import com.example.myjavafxapp.model.DictionaryCommandLine;
 import com.example.myjavafxapp.model.Word;
+import com.example.myjavafxapp.sqlite.DatabaseManager;
 import com.example.myjavafxapp.util.DictionaryManagement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,15 +14,23 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.text.BreakIterator;
+
 public class Scene2Controller {
+
     @FXML
     private TextField searchField;
 
     @FXML
-    private TextArea resultTextArea;
+    private TextField wordSoundArea;
+    @FXML
+    private TextField wordTargetArea;
 
     @FXML
-    private TextArea resultWordArea;
+    private TextArea wordExplainArea;
+
+    @FXML
+    private TextArea resultArea;
 
     @FXML
     private Button searchButton;
@@ -29,8 +38,6 @@ public class Scene2Controller {
 
     @FXML
     private Stage primaryStage;
-
-
 
 
     // Phương thức để thiết lập primaryStage từ bên ngoài
@@ -41,16 +48,33 @@ public class Scene2Controller {
     @FXML
     private void searchButtonAction() {
         // Logic khi nút search được nhấn
-
         String searchTerm = searchField.getText();
-        Word result = performSearch(searchTerm);
-        String resultvjppro;
-        if (result != null) {
-            resultvjppro = result.toString();
-        } else {
-            resultvjppro = "Can't find the word";
+        try {
+            Word result = performSearch(searchTerm);
+            String result1 = DatabaseManager.searchWord(searchTerm);
+
+
+            if (result == null) {
+                wordTargetArea.setText("");
+                wordSoundArea.setText("");
+                wordExplainArea.setText("Can't search word.");
+            } else {
+                wordTargetArea.setText(result.getWordTarget());
+                wordSoundArea.setText(result.getWordSound());
+                wordExplainArea.setText(result.getWordExplain());
+            }
+            if (result1 == null) {
+                resultArea.setText("Can't search word.");
+            } else {
+                resultArea.setText(result1);
+            }
+
+
+        } catch (Exception e) {
+            System.out.println(e);
         }
-        resultTextArea.setText(resultvjppro);
+
+
     }
 
     //

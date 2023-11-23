@@ -70,4 +70,5 @@ public class Word {
     public String toString() {
         return wordTarget + '\n' + wordSound + '\n' + wordExplain + '\n';
     }
+
 }

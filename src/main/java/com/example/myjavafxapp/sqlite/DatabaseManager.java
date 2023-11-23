@@ -42,13 +42,18 @@ public class DatabaseManager {
     }
 
 
-    public static void fetchData() {
+    public static String searchWord(String wordSearch) {
         try {
-            String sql = "SELECT * FROM English";
+            StringBuilder resultBuilder = new StringBuilder();
+            String sql = "SELECT * FROM English WHERE Word = ?";
+
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
+
+                statement.setString(1, wordSearch); // Sử dụng tham số để tránh SQL injection
+
                 try (ResultSet resultSet = statement.executeQuery()) {
                     while (resultSet.next()) {
-                        int id = resultSet.getInt("Id");
+
                         String word = resultSet.getString("Word");
                         String type = resultSet.getString("Type");
                         String meaning = resultSet.getString("Meaning");
@@ -57,21 +62,48 @@ public class DatabaseManager {
                         String synonym = resultSet.getString("Synonym");
                         String antonyms = resultSet.getString("Antonyms");
 
-                        System.out.println("ID: " + id);
-                        System.out.println("Word: " + word);
-                        System.out.println("Type: " + type);
-                        System.out.println("Meaning: " + meaning);
-                        System.out.println("Pronunciation: " + pronunciation);
-                        System.out.println("Example: " + example);
-                        System.out.println("Synonym: " + synonym);
-                        System.out.println("Antonyms: " + antonyms);
-                        System.out.println("-----------------------------");
+                        // Xây dựng nội dung cho StringBuilder
+                        resultBuilder.append("Word: ").append(word).append("\n");
+                        resultBuilder.append("Type: ").append(type).append("\n");
+                        resultBuilder.append("Meaning: ").append(meaning).append("\n");
+                        resultBuilder.append("Pronunciation: ").append(pronunciation).append("\n");
+                        resultBuilder.append("Example: ").append(example).append("\n");
+                        resultBuilder.append("Synonym: ").append(synonym).append("\n");
+                        resultBuilder.append("Antonyms: ").append(antonyms).append("\n");
+                        return resultBuilder.toString();
                     }
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
+//            sql = sql + wordSearch;
+//            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+//                try (ResultSet resultSet = statement.executeQuery()) {
+//                    while (resultSet.next()) {
+//                        String word = resultSet.getString("Word");
+//                        String type = resultSet.getString("Type");
+//                        String meaning = resultSet.getString("Meaning");
+//                        String pronunciation = resultSet.getString("Pronunciation");
+//                        String example = resultSet.getString("Example");
+//                        String synonym = resultSet.getString("Synonym");
+//                        String antonyms = resultSet.getString("Antonyms");
+//
+//                        System.out.println("Word: " + word);
+//                        System.out.println("Type: " + type);
+//                        System.out.println("Meaning: " + meaning);
+//                        System.out.println("Pronunciation: " + pronunciation);
+//                        System.out.println("Example: " + example);
+//                        System.out.println("Synonym: " + synonym);
+//                        System.out.println("Antonyms: " + antonyms);
+//                        System.out.println("-----------------------------");
+//                    }
+//                }
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
     }
 
 }

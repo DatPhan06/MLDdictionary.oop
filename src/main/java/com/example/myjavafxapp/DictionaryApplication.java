@@ -21,8 +21,6 @@ public class DictionaryApplication extends Application {
 //        DatabaseManager.insertData("cat","n","mèo","","","","");
 //        DatabaseManager.insertData("bird","n","chim","","","","");
 
-        // Lấy và in ra dữ liệu
-//        DatabaseManager.fetchData();
 
 //        try {
 //            //English to Vietnamese
@@ -55,6 +53,8 @@ public class DictionaryApplication extends Application {
     }
 
     public static void main(String[] args) {
+        // Lấy và in ra dữ liệu
+
         try {
             DictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
             System.out.println("Import dictionary sucessfully. \n");

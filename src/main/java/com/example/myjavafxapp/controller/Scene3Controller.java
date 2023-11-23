@@ -1,19 +1,23 @@
 package com.example.myjavafxapp.controller;
 
-import com.example.myjavafxapp.translator.GoogleTranslate;
 import com.example.myjavafxapp.translator.Translate;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class Scene3Controller {
+
+    @FXML
+    private ChoiceBox<String> yourChoiceBox;
 
     @FXML
     private TextArea inputTextArea;
@@ -33,14 +37,31 @@ public class Scene3Controller {
 
     @FXML
     private void translateButtonAction() throws IOException {
+
         // Logic khi nút translate được nhấn
 
         String searchTerm = inputTextArea.getText();
-        String result = Translate.translate("vi", searchTerm);
+        String result;
+        String languageChoice = handleChoiceBoxAction();
+
+        if (languageChoice == null){
+        result = Translate.translate("vi", searchTerm);}
+        else {
+            languageChoice = languageChoice.substring(0,2);
+            result = Translate.translate(languageChoice, searchTerm);
+        }
 
 //        String result = performTranslate(searchTerm);
 
         resultTextArea.setText(result);
+    }
+
+    @FXML
+    private String handleChoiceBoxAction() {
+        String selectedValue = yourChoiceBox.getValue();
+        return selectedValue;
+
+        // Now you can use the selectedValue as needed.
     }
 
 //
