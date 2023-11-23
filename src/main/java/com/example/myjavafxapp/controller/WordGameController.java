@@ -56,6 +56,7 @@ public class WordGameController {
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
+
     @FXML
     private void handleExitButtonAction(ActionEvent event) throws Exception {
         // Logic để thoát khỏi ứng dụng
@@ -93,7 +94,7 @@ public class WordGameController {
 
     public void initialize() {
         DictionaryManagement dictionaryManagement = new DictionaryManagement();
-        dictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
+        DictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
         wordGame = new WordGame(dictionaryManagement);
         timeLeft = 50; // Đặt thời gian ban đầu là 60 giây
         // Khởi tạo ToggleGroup
@@ -102,7 +103,6 @@ public class WordGameController {
         optionB.setToggleGroup(answerToggleGroup);
         optionC.setToggleGroup(answerToggleGroup);
         optionD.setToggleGroup(answerToggleGroup);
-
 
 
         optionA.setText("");
@@ -191,7 +191,7 @@ public class WordGameController {
         }
     }
 
-//    private void nextWord() {
+    //    private void nextWord() {
 //        currentWord = wordGame.getRandomWord();
 //        if (currentWord != null) {
 //            wordLabel.setText(currentWord.getWordTarget());
@@ -202,22 +202,22 @@ public class WordGameController {
 //        }
 //        answerTextField.clear();
 //    }
-private void nextWord() {
-    currentWord = wordGame.getRandomWord();
-    if (currentWord != null) {
-        wordLabel.setText(currentWord.getWordTarget());
+    private void nextWord() {
+        currentWord = wordGame.getRandomWord();
+        if (currentWord != null) {
+            wordLabel.setText(currentWord.getWordTarget());
 
-        List<String> answerOptions = wordGame.generateAnswerOptions(currentWord);
-        // Đảm bảo rằng bạn có đủ tùy chọn để đặt vào các RadioButton
-        optionA.setText(answerOptions.get(0));
-        optionB.setText(answerOptions.get(1));
-        optionC.setText(answerOptions.get(2));
-        optionD.setText(answerOptions.get(3));
-    } else {
-        wordLabel.setText("Hết từ!");
-        endGame();
+            List<String> answerOptions = wordGame.generateAnswerOptions(currentWord);
+            // Đảm bảo rằng bạn có đủ tùy chọn để đặt vào các RadioButton
+            optionA.setText(answerOptions.get(0));
+            optionB.setText(answerOptions.get(1));
+            optionC.setText(answerOptions.get(2));
+            optionD.setText(answerOptions.get(3));
+        } else {
+            wordLabel.setText("Hết từ!");
+            endGame();
+        }
     }
-}
 
     private void updateScore() {
         // Cập nhật điểm số vào resultLabel hoặc một Label khác dành cho điểm

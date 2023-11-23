@@ -16,83 +16,83 @@ public class DictionaryCommandLine {
         return dictionaryManagement;
     }
 
-    // Hàm chạy giao diện chính
-    public void dictionaryAdvanced() {
-        Scanner scanner = new Scanner(System.in);
-        // neu v thi chi hien o day thoi a?
-        dictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEV.txt");
-
-        while (true) {
-            System.out.println("Welcome to My Application!");
-            System.out.println("[0] Exit");
-            System.out.println("[1] Add");
-            System.out.println("[2] Remove");
-            System.out.println("[3] Update");
-            System.out.println("[4] Display");
-            System.out.println("[5] Lookup");
-            System.out.println("[6] Search");
-            System.out.println("[7] Game");
-            System.out.println("[8] Import from file");
-            System.out.println("[9] Export to file");
-
-            System.out.print("Your action: ");
-            String userAction = scanner.nextLine();
-
-            if (userAction.matches("[0-9]")) {
-                int action = Integer.parseInt(userAction);
-
-                switch (action) {
-                    case 0:
-                        System.out.println("Exiting the application.");
-                        scanner.close();
-                        System.exit(0);
-                        break;
-                    case 1:
-                        // Thêm từ
-//                        dictionaryManagement.insertFromCommandLine();
-                        System.out.println("Word added successfully!");
-                        break;
-                    case 2:
-                        // Xóa từ
-                        removeWord();
-                        break;
-                    case 3:
-                        // Sửa từ
-                        updateWord();
-                        break;
-                    case 4:
-                        // Hiển thị danh sách từ
-                        showAllWords();
-                        break;
-                    case 5:
-                        // Tra cứu
-//                        lookupWord();
-                        break;
-                    case 6:
-                        // Tìm kiếm
-                        dictionarySearcher();
-                        break;
-                    case 7:
-                        // Truy cập phần Game
-                        startGame();
-                        break;
-                    case 8:
-                        // Nhập danh sách từ từ tệp
-                        importFromFile();
-                        break;
-                    case 9:
-                        // Xuất dữ liệu danh sách từ ra tệp
-                        exportToFile();
-                        break;
-                    default:
-                        System.out.println("Action not supported. Please enter a valid number (0-9).");
-                        break;
-                }
-            } else {
-                System.out.println("Action not supported. Please enter a valid number (0-9).");
-            }
-        }
-    }
+//    // Hàm chạy giao diện chính
+//    public void dictionaryAdvanced() {
+//        Scanner scanner = new Scanner(System.in);
+//        // neu v thi chi hien o day thoi a?
+//        dictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEV.txt");
+//
+//        while (true) {
+//            System.out.println("Welcome to My Application!");
+//            System.out.println("[0] Exit");
+//            System.out.println("[1] Add");
+//            System.out.println("[2] Remove");
+//            System.out.println("[3] Update");
+//            System.out.println("[4] Display");
+//            System.out.println("[5] Lookup");
+//            System.out.println("[6] Search");
+//            System.out.println("[7] Game");
+//            System.out.println("[8] Import from file");
+//            System.out.println("[9] Export to file");
+//
+//            System.out.print("Your action: ");
+//            String userAction = scanner.nextLine();
+//
+//            if (userAction.matches("[0-9]")) {
+//                int action = Integer.parseInt(userAction);
+//
+//                switch (action) {
+//                    case 0:
+//                        System.out.println("Exiting the application.");
+//                        scanner.close();
+//                        System.exit(0);
+//                        break;
+//                    case 1:
+//                        // Thêm từ
+////                        dictionaryManagement.insertFromCommandLine();
+//                        System.out.println("Word added successfully!");
+//                        break;
+//                    case 2:
+//                        // Xóa từ
+//                        removeWord();
+//                        break;
+//                    case 3:
+//                        // Sửa từ
+//                        updateWord();
+//                        break;
+//                    case 4:
+//                        // Hiển thị danh sách từ
+//                        showAllWords();
+//                        break;
+//                    case 5:
+//                        // Tra cứu
+////                        lookupWord();
+//                        break;
+//                    case 6:
+//                        // Tìm kiếm
+//                        dictionarySearcher();
+//                        break;
+//                    case 7:
+//                        // Truy cập phần Game
+//                        startGame();
+//                        break;
+//                    case 8:
+//                        // Nhập danh sách từ từ tệp
+//                        importFromFile();
+//                        break;
+//                    case 9:
+//                        // Xuất dữ liệu danh sách từ ra tệp
+////                        exportToFile();
+//                        break;
+//                    default:
+//                        System.out.println("Action not supported. Please enter a valid number (0-9).");
+//                        break;
+//                }
+//            } else {
+//                System.out.println("Action not supported. Please enter a valid number (0-9).");
+//            }
+//        }
+//    }
 
     // Hàm khởi tạo
     public DictionaryCommandLine() {
@@ -185,21 +185,21 @@ public class DictionaryCommandLine {
 
     }
 
-    // Hàm nhập dữ liệu từ file
-    public void importFromFile(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the file path to import: ");
-        String importFilePath = scanner.nextLine();
-        dictionaryManagement.insertFromFile(importFilePath);
-    }
+//    // Hàm nhập dữ liệu từ file
+//    public void importFromFile(){
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter the file path to import: ");
+//        String importFilePath = scanner.nextLine();
+//        dictionaryManagement.insertFromFile(importFilePath);
+//    }
 
-    // Hàm xuất dữ liệu ra file
-    public void exportToFile(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the file path to export: ");
-        String exportFilePath = scanner.nextLine();
-        dictionaryManagement.dictionaryExportToFile(exportFilePath);
-    }
+//    // Hàm xuất dữ liệu ra file
+//    public void exportToFile(){
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter the file path to export: ");
+//        String exportFilePath = scanner.nextLine();
+//        dictionaryManagement.dictionaryExportToFile(exportFilePath);
+//    }
 
     // Hàm chơi trò chơi
 
@@ -213,20 +213,20 @@ public class DictionaryCommandLine {
 //        game.playGame(numberOfQuestions);
 //    }
 
-    public void startGame() {
-        System.out.println("Chào mừng bạn đến với Trò chơi!");
-        System.out.print("Chọn số lượng câu hỏi: ");
-        Scanner scanner = new Scanner(System.in);
-        int numberOfQuestions = scanner.nextInt();
-        scanner.nextLine(); // Để loại bỏ ký tự newline sau khi nhập số
-        WordGame game = new WordGame(dictionaryManagement);
-        game.playGame(numberOfQuestions);
-    }
+//    public void startGame() {
+//        System.out.println("Chào mừng bạn đến với Trò chơi!");
+//        System.out.print("Chọn số lượng câu hỏi: ");
+//        Scanner scanner = new Scanner(System.in);
+//        int numberOfQuestions = scanner.nextInt();
+//        scanner.nextLine(); // Để loại bỏ ký tự newline sau khi nhập số
+//        WordGame game = new WordGame(dictionaryManagement);
+//        game.playGame(numberOfQuestions);
+//    }
 
-    // Chương trình chính
-    public static void main(String[] args) {
-        DictionaryCommandLine dictionaryCommandLine = new DictionaryCommandLine();
-        dictionaryCommandLine.dictionaryAdvanced();
-    }
+//    // Chương trình chính
+//    public static void main(String[] args) {
+//        DictionaryCommandLine dictionaryCommandLine = new DictionaryCommandLine();
+//        dictionaryCommandLine.dictionaryAdvanced();
+//    }
 }
 

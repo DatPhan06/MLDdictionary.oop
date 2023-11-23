@@ -20,6 +20,7 @@ public class Scene1Controller {
         Parent root = loader.load();
 
         Scene2Controller scene2Controller = loader.getController();
+
         scene2Controller.setPrimaryStage(primaryStage);
 
         Scene scene = new Scene(root);

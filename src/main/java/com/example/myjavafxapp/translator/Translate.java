@@ -20,11 +20,7 @@ public class Translate {
 
     public static String translate(String sourceLanguage , String targetLanguage , String text) throws IOException {
         String urlText = generateURL(sourceLanguage, targetLanguage, text);
-        URL url = new URL(urlText);
-        String rawData = urlToText(url);//Gets text from Google
-        if (rawData == null) {
-            return null;
-        }
+        String rawData = urlToText(new URL(urlText));//Gets text from Google
         String[] raw = rawData.split("\"");//Parses the JSON
         if (raw.length < 2) {
             return null;

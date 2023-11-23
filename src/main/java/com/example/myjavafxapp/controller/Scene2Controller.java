@@ -21,18 +21,17 @@ public class Scene2Controller {
     private TextArea resultTextArea;
 
     @FXML
+    private TextArea resultWordArea;
+
+    @FXML
     private Button searchButton;
 
 
     @FXML
     private Stage primaryStage;
 
-    private final DictionaryCommandLine dictionaryCommandLine;
 
-    public Scene2Controller() {
-        dictionaryCommandLine = new DictionaryCommandLine();
-        dictionaryCommandLine.dictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
-    }
+
 
     // Phương thức để thiết lập primaryStage từ bên ngoài
     public void setPrimaryStage(Stage primaryStage) {
@@ -45,7 +44,12 @@ public class Scene2Controller {
 
         String searchTerm = searchField.getText();
         Word result = performSearch(searchTerm);
-        String resultvjppro = result.toString();
+        String resultvjppro;
+        if (result != null) {
+            resultvjppro = result.toString();
+        } else {
+            resultvjppro = "Can't find the word";
+        }
         resultTextArea.setText(resultvjppro);
     }
 
@@ -53,11 +57,9 @@ public class Scene2Controller {
     private Word performSearch(String searchTerm) {
         // Logic tìm kiếm từ
 
-        // Lấy quản lý từ điển từ lớp DictionaryCommandLine
-        DictionaryManagement dictionaryManagement = DictionaryCommandLine.getDictionaryManagement();
 
         // Thực hiện tìm kiếm các từ khớp với searchTerm
-        Word result= dictionaryManagement.dictionaryLookup(searchTerm.trim());
+        Word result = DictionaryManagement.dictionaryLookup(searchTerm.trim());
 
 
         // Kiểm tra xem có từ nào khớp không
@@ -83,12 +85,15 @@ public class Scene2Controller {
     public void switchToScene4(ActionEvent event) throws Exception {
         loadScene("Scene4.fxml");
     }
+
     public void switchToScene5(ActionEvent event) throws Exception {
         loadScene("Scene5.fxml");
     }
+
     public void switchToScene6(ActionEvent event) throws Exception {
         loadScene("Scene6.fxml");
     }
+
     public void switchToScene7(ActionEvent event) throws Exception {
         loadScene("Scene7.fxml");
     }

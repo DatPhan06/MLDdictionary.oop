@@ -5,10 +5,10 @@ import java.util.Objects;
 
 public class Word {
     private String wordTarget;
+    private String wordSound;
     private String wordExplain;
 
 
-    private String wordSound;
 
     public Word(String wordTarget, String wordExplain) {
         this.wordTarget = wordTarget;

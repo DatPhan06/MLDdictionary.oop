@@ -3,10 +3,9 @@ package com.example.myjavafxapp.model;
 import java.util.ArrayList;
 
 public class Dictionary {
-    private final ArrayList<Word> words;
+    private static ArrayList<Word> words;
 
     public Dictionary() {
-
         words = new ArrayList<>();
     }
 

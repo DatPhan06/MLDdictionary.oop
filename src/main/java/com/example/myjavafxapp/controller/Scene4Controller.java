@@ -14,7 +14,6 @@ public class Scene4Controller {
     @FXML
     private Stage primaryStage;
 
-//    private DictionaryManagement dictionaryManagement;
 
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;

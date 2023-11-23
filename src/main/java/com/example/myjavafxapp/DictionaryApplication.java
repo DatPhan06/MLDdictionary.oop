@@ -2,7 +2,7 @@ package com.example.myjavafxapp;
 
 import com.example.myjavafxapp.controller.Scene1Controller;
 import com.example.myjavafxapp.sqlite.DatabaseManager;
-//import com.example.myjavafxapp.util.SpeechAPI;
+import com.example.myjavafxapp.util.DictionaryManagement;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -55,8 +55,15 @@ public class DictionaryApplication extends Application {
     }
 
     public static void main(String[] args) {
-
+        try {
+            DictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
+            System.out.println("Import dictionary sucessfully. \n");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         launch(args);
+        DictionaryManagement.exportToFile("src/main/resources/txt/dictionaryEVout.txt");
+
     }
 }
 

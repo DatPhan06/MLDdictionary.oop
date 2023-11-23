@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class DictionaryManagement {
-    private final Dictionary dictionary;
+    private static Dictionary dictionary = new Dictionary();
 
     public DictionaryManagement() {
         dictionary = new Dictionary();
@@ -43,7 +43,7 @@ public class DictionaryManagement {
 //    }
 
     // Hàm xóa từ
-    public boolean removeWord(String wordToRemove) {
+    public static boolean removeWord(String wordToRemove) {
         ArrayList<Word> words = dictionary.getAllWords();
 
         for (Word word : words) {
@@ -57,7 +57,7 @@ public class DictionaryManagement {
     }
 
     // Hàm cập nhật từ
-    public boolean updateWord(String wordToUpdate, String newDefinition) {
+    public static boolean updateWord(String wordToUpdate, String newDefinition) {
         ArrayList<Word> words = dictionary.getAllWords();
 
         for (Word word : words) {
@@ -71,7 +71,7 @@ public class DictionaryManagement {
     }
 
     // Hàm tra từ
-    public Word dictionaryLookup(String wordToLookup) {
+    public static Word dictionaryLookup(String wordToLookup) {
         ArrayList<Word> words = dictionary.getAllWords();
 
         for (Word word : words) {
@@ -84,7 +84,7 @@ public class DictionaryManagement {
     }
 
     // Hàm tìm kiếm từ
-    public ArrayList<Word> searchWords(String prefix) {
+    public static ArrayList<Word> searchWords(String prefix) {
         ArrayList<Word> words = dictionary.getAllWords();
         ArrayList<Word> matchingWords = new ArrayList<>();
 
@@ -96,7 +96,7 @@ public class DictionaryManagement {
         return matchingWords;
     }
 
-    public void insertFromFile(String path) {
+    public static void insertFromFile(String path) {
 
         byte[] encoded = new byte[0];
         try {
@@ -145,17 +145,74 @@ public class DictionaryManagement {
 //    }
 
 
-    // Hàm xuất ra tệp
-    public void dictionaryExportToFile(String filePath) {
-        try (PrintWriter writer = new PrintWriter(filePath)) {
-            ArrayList<Word> words = dictionary.getAllWords();
-            for (Word word : words) {
-                writer.println(word.getWordTarget() + "\t" + word.getWordExplain());
+//     // Hàm nhập từ tệp
+//    public void insertFromFile(String filePath) {
+//        try (Scanner fileScanner = new Scanner(new File(filePath))) {
+//            while (fileScanner.hasNextLine()) {
+//                String line = fileScanner.nextLine();
+//                String[] parts = line.split("\t\t"); // Giả sử từ và nghĩa được phân tách bằng 2 dấu tab
+//                if (parts.length == 2) {
+//                    Word word = new Word(parts[0], parts[1]);
+//                    dictionary.addWord(word);
+//                }
+//            }
+//            System.out.println("Import successful!");
+//        } catch (FileNotFoundException e) {
+//            System.out.println("File not found.");
+//        }
+//    }
+
+
+    public static void exportToFile(String path) {
+        StringBuilder content = new StringBuilder();
+        ArrayList<Word> words = dictionary.getAllWords();
+        for (Word word : words) {
+            String wordTarget = word.getWordTarget();
+            String wordExplain = word.getWordExplain();
+            String wordSound = word.getWordSound();
+
+            // Append "@" to separate wordTarget and wordExplain
+            content.append("@");
+
+            // Append wordTarget
+            content.append(wordTarget).append(" ");
+
+            // If wordSound is not empty
+            if (!wordSound.isEmpty()) {
+                content.append(wordSound).append("\n");
             }
-            System.out.println("Export successful!");
-        } catch (FileNotFoundException e) {
-            System.out.println("Error exporting to file.");
+
+
+
+            // Append wordExplain
+            content.append(wordExplain);
+
+            // Append newline to separate entries
+            content.append("\n");
         }
 
+        // Convert StringBuilder to byte array and write to file
+        try {
+            Files.write(Paths.get(path), content.toString().getBytes(Charset.defaultCharset()));
+            System.out.println("Export successful!");
+        } catch (IOException e) {
+            throw new RuntimeException("Error exporting to file: " + e.getMessage(), e);
+        }
     }
+
+
+
+//    // Hàm xuất ra tệp
+//    public void dictionaryExportToFile(String filePath) {
+//        try (PrintWriter writer = new PrintWriter(filePath)) {
+//            ArrayList<Word> words = dictionary.getAllWords();
+//            for (Word word : words) {
+//                writer.println(word.getWordTarget() + "\t" + word.getWordExplain());
+//            }
+//            System.out.println("Export successful!");
+//        } catch (FileNotFoundException e) {
+//            System.out.println("Error exporting to file.");
+//        }
+//
+//    }
 }
