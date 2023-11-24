@@ -10,5 +10,6 @@ Thông tin thành viên :
 Thông tin dự án : 
 - Sử dụng Ngôn ngữ lập tình Java
 - Sử dụng thư viện đồ họa JavaFX
+- Sử dụng cơ sở dữ liệu SQLite
 
 Mô tả project : 
