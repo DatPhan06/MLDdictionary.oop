@@ -25,6 +25,7 @@ public class DatabaseManager {
     public static void createTable() {
         try {
             String sql = "CREATE TABLE IF NOT EXISTS English (Id INTEGER PRIMARY KEY, Word varchar(255), Type varchar(255), Meaning varchar(255), Pronunciation varchar(255), Example varchar(255), Synonym varchar(255), Antonyms varchar(255));";
+            assert connection != null;
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.execute();
             }
@@ -47,6 +48,7 @@ public class DatabaseManager {
     public static void insertData(String word, String type, String meaning, String pronunciation, String example, String synonym, String antonyms) {
         try {
             String sql = "INSERT INTO English (Word, Type, Meaning, Pronunciation, Example, Synonym, Antonyms) VALUES (?, ?, ?, ?, ?, ?, ?);";
+            assert connection != null;
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, word);
                 statement.setString(2, type);
@@ -74,6 +76,7 @@ public class DatabaseManager {
             StringBuilder resultBuilder = new StringBuilder();
             String sql = "SELECT * FROM English WHERE Word = ?";
 
+            assert connection != null;
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
 
                 statement.setString(1, wordSearch); // Sử dụng tham số để tránh SQL injection

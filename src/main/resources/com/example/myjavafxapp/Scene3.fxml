@@ -60,7 +60,7 @@
                     </Button>
                     <!--                    <TextField fx:id="searchField1" alignment="CENTER" layoutX="6.0" layoutY="42.0" prefHeight="39.0"-->
                     <!--                               prefWidth="120.0" promptText="Language 2" style="-fx-background-radius: 10;"/>-->
-                    <ChoiceBox fx:id="yourChoiceBox" layoutX="6.0" layoutY="32.0" prefHeight="40.0" prefWidth="203.0" style="-fx-background-radius: 20;">
+                    <ChoiceBox fx:id="yourChoiceBox" layoutX="6.0" layoutY="32.0" prefHeight="40.0" prefWidth="203.0" style="-fx-background-radius: 20; ">
                         <items>
                             <FXCollections fx:factory="observableArrayList">
                                 <String fx:value="Afrikaans af" />

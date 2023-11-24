@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 import java.text.BreakIterator;
 
-public class Scene2Controller {
+public class Scene2Controller extends DictionaryController{
 
     @FXML
     private TextField searchField;

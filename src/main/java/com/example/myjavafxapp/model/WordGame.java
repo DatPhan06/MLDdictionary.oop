@@ -15,7 +15,7 @@ public class WordGame {
 
     public WordGame(DictionaryManagement dictionaryManagement) {
         this.dictionaryManagement = dictionaryManagement;
-        dictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
+        DictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
         this.score = 0;
         this.random = new Random();
         // Initialize the word list with a shuffled list of all words from the dictionary
@@ -31,7 +31,7 @@ public class WordGame {
     }
 
     public boolean checkAnswer(String wordTarget, String userAnswer) {
-        Word word = dictionaryManagement.dictionaryLookup(wordTarget);
+        Word word = DictionaryManagement.dictionaryLookup(wordTarget);
         System.out.println(word);
         if (word != null && word.getWordExplain().equalsIgnoreCase(userAnswer)) {
             score++;

@@ -7,12 +7,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-    private final DictionaryManagement dictionaryManagement;
     private final ArrayList<Word> words;
     private int score;
 
     public Game(DictionaryManagement dictionaryManagement) {
-        this.dictionaryManagement = dictionaryManagement;
         this.words = dictionaryManagement.getDictionary().getAllWords();
         this.score = 0;
     }

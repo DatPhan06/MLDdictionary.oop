@@ -6,7 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
-public class Scene1Controller {
+public class Scene1Controller extends DictionaryController{
     @FXML
     private Stage primaryStage;
 

@@ -7,7 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Scene6Controller {
+public class Scene6Controller extends DictionaryController{
     @FXML
     private Stage primaryStage;
 

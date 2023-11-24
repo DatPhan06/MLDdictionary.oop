@@ -10,7 +10,7 @@ import com.example.myjavafxapp.util.DictionaryManagement;
 
 import java.io.IOException;
 
-public class Scene4Controller {
+public class Scene4Controller extends DictionaryController{
     @FXML
     private Stage primaryStage;
 

@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Scene3Controller {
+public class Scene3Controller extends DictionaryController{
 
     @FXML
     private ChoiceBox<String> yourChoiceBox;

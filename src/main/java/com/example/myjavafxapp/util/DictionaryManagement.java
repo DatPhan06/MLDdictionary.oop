@@ -3,13 +3,12 @@ package com.example.myjavafxapp.util;
 import com.example.myjavafxapp.model.Dictionary;
 import com.example.myjavafxapp.model.Word;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class DictionaryManagement {
     private static Dictionary dictionary = new Dictionary();
@@ -23,24 +22,27 @@ public class DictionaryManagement {
     }
 
     // Hàm thêm từ mới từ commandline
-//    public void insertFromCommandLine() {
-//        Scanner scanner = new Scanner(System.in);
-//
-//        System.out.print("Enter the number of words: ");
-//        int n = scanner.nextInt();
-//        scanner.nextLine(); // Consume the newline character
-//
-//        for (int i = 0; i < n; i++) {
-//            System.out.print("Enter word in English: ");
-//            String word_target = scanner.nextLine();
-//
-//            System.out.print("Enter Vietnamese meaning: ");
-//            String word_explain = scanner.nextLine();
-//
-//            Word word = new Word(word_target, word_explain);
-//            dictionary.addWord(word);
-//        }
-//    }
+    public void insertFromCommandLine() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of words: ");
+        int n = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter word in English: ");
+            String word_target = scanner.nextLine();
+
+            System.out.print("Enter sound in English: ");
+            String word_sound = scanner.nextLine();
+
+            System.out.print("Enter Vietnamese meaning: ");
+            String word_explain = scanner.nextLine();
+
+            Word word = new Word(word_target, word_explain, word_sound);
+            dictionary.addWord(word);
+        }
+    }
 
     // Hàm xóa từ
     public static boolean removeWord(String wordToRemove) {
@@ -57,17 +59,31 @@ public class DictionaryManagement {
     }
 
     // Hàm cập nhật từ
-    public static boolean updateWord(String wordToUpdate, String newDefinition) {
+    public static boolean updateWord(String wordToUpdate, String newWordSound, String newDefinition) {
         ArrayList<Word> words = dictionary.getAllWords();
 
         for (Word word : words) {
             if (word.getWordTarget().equalsIgnoreCase(wordToUpdate)) {
+                word.setWordSound(newWordSound);
                 word.setWordExplain(newDefinition);
                 return true;
             }
         }
 
         return false; // Trả về false nếu từ không tìm thấy
+    }
+
+    // Hàm thêm từ
+    public static boolean addWord(String wordToAdd, String newWordSound, String newDefinition) {
+        ArrayList<Word> words = dictionary.getAllWords();
+        for (Word word : words)
+            if (word.getWordTarget().equalsIgnoreCase(wordToAdd)) {
+                return false;
+            }
+        Word word = new Word(wordToAdd, newDefinition, newWordSound);
+        words.add(word);
+        return true;
+
     }
 
     // Hàm tra từ
@@ -122,7 +138,7 @@ public class DictionaryManagement {
                     wordSound = "";
                 }
                 wordExplain = result[1];
-                dictionary.addWord(new Word(wordTarget.trim(), wordExplain.trim(),  wordSound.trim()));
+                dictionary.addWord(new Word(wordTarget.trim(), wordExplain.trim(), wordSound.trim()));
             }
         }
     }
@@ -182,8 +198,6 @@ public class DictionaryManagement {
                 content.append(wordSound).append("\n");
             }
 
-
-
             // Append wordExplain
             content.append(wordExplain);
 
@@ -199,7 +213,6 @@ public class DictionaryManagement {
             throw new RuntimeException("Error exporting to file: " + e.getMessage(), e);
         }
     }
-
 
 
 //    // Hàm xuất ra tệp
