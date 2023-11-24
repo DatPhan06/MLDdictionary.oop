@@ -2,7 +2,6 @@ package com.example.myjavafxapp.controller;
 
 import com.example.myjavafxapp.speechAPI.SpeechAPI;
 import com.example.myjavafxapp.translator.Translate;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -60,9 +59,9 @@ public class Scene3Controller extends DictionaryController{
             // Nếu không có dấu cách, in ra chuỗi gốc
             System.out.println(languageChoice);
         }
-            result = Translate.translate(result1, searchTerm);
+        result = Translate.translate(result1, searchTerm);
 //            speechAPI.speak(result1, result);
-            
+
 //        String result = performTranslate(searchTerm);
 
         resultTextArea.setText(result);

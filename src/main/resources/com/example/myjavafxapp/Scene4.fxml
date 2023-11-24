@@ -43,7 +43,7 @@
     <VBox prefHeight="800.0" prefWidth="388.0">
         <children>
             <Pane prefHeight="223.0" prefWidth="388.0" />
-            <TextField blendMode="ADD" cache="true" editable="false" prefHeight="71.0" prefWidth="388.0" promptText="Discover the beauty ">
+            <TextField blendMode="ADD" cache="true" prefHeight="71.0" prefWidth="388.0" promptText="Discover the beauty ">
                 <font>
                     <Font size="36.0" />
                 </font>
@@ -95,17 +95,18 @@
          </HBox>
         </children>
     </VBox>
-    <VBox prefHeight="800.0" prefWidth="376.0">
+    <VBox prefHeight="759.0" prefWidth="379.0">
         <children>
             <Pane prefHeight="200.0" prefWidth="200.0" />
             <ImageView fitHeight="320.0" fitWidth="377.0" pickOnBounds="true" preserveRatio="true" />
         </children>
-      <ImageView fitHeight="525.0" fitWidth="379.0" pickOnBounds="true" preserveRatio="true">
+      <Pane prefHeight="20.0" prefWidth="379.0" />
+      <ImageView fitHeight="438.0" fitWidth="379.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../graphic/img/MimGame.jpg" />
          </image>
       </ImageView>
-      <Pane prefHeight="381.0" prefWidth="379.0" />
+      <Pane prefHeight="390.0" prefWidth="379.0" />
     </VBox>
 
 </HBox>

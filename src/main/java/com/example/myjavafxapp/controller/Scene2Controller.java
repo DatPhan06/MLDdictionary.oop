@@ -1,6 +1,5 @@
 package com.example.myjavafxapp.controller;
 
-import com.example.myjavafxapp.model.DictionaryCommandLine;
 import com.example.myjavafxapp.model.Word;
 import com.example.myjavafxapp.sqlite.DatabaseManager;
 import com.example.myjavafxapp.util.DictionaryManagement;
@@ -13,8 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import java.text.BreakIterator;
 
 public class Scene2Controller extends DictionaryController{
 

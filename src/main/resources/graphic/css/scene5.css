@@ -22,3 +22,6 @@ Button {
  -fx-font-size: 14px;
  -fx-text-fill: #f4efef
  }
+ .color-changing-button:pressed {
+   -fx-background-color: #490F59;
+ }

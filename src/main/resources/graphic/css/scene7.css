@@ -25,3 +25,7 @@ Button {
     -fx-cursor : pointer;
     -fx-border-radius : 20px;
 }
+
+.transparent-text-area {
+    -fx-background-color: rgba(0, 0, 0, 100);
+}

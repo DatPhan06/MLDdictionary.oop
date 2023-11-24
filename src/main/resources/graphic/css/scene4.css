@@ -14,7 +14,9 @@ Button {
  -fx-font-size: 14px;
  -fx-text-fill: #ae0f9f
  }
-
+.color-changing-button:pressed {
+  -fx-background-color: #490F59;
+}
 .class-button {
  -fx-font-size: 14px;
  -fx-text-fill: #f4efef

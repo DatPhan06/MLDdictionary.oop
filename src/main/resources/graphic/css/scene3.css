@@ -15,7 +15,20 @@ Button {
  -fx-font-size: 14px;
  -fx-text-fill: #ae0f9f
  }
+
 .class-button {
   -fx-font-size: 14px;
   -fx-text-fill: #f4efef
   }
+
+ .class-button-typical {
+  -fx-background-color: #8B409F;
+  -fx-background-radius: 20;
+  -fx-padding : 5px 10px;
+  -fx-font-size: 20px;
+  -fx-text-fill: #f4efef
+}
+
+.color-changing-button:pressed {
+  -fx-background-color: #490F59;
+}
