@@ -5,23 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e785c23-0157-440b-a9d5-01518d109878" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphic/img/Viewgame.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_2023_6_46_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_2023_6_46_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_11_2023_12_18_CH_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_11_2023_12_18_CH__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_2023_5_23_am__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_2023_5_23_am__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_2023_5_23_am__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_2023_5_23_am__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_2023_9_49_am__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_2023_9_49_am__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/DictionaryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/DictionaryApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene2Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene3Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene3Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/WordGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/WordGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/WordGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/model/WordGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/sqlite/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/sqlite/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/util/DictionaryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/util/DictionaryManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene3.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene4.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene7.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Scene7.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/WordGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/WordGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene2.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene3.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene4.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene4.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene5.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene5.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene7.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene7.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/engData.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/engData.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVplus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/txt/dictionaryEVplus.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +94,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Github\MLDdictionary.oop\src\main\resources\graphic\img" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Phan Tien Dat\OneDrive - vnu.edu.vn\Desktop\Workspace\MLDdictionary.oop\src\main\resources\csv" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.myjavafxapp" />
     </key>
@@ -145,6 +148,10 @@
       <workItem from="1700749038891" duration="350000" />
       <workItem from="1700753780989" duration="5719000" />
       <workItem from="1700761293452" duration="6311000" />
+      <workItem from="1700785785162" duration="4012000" />
+      <workItem from="1700852116050" duration="927000" />
+      <workItem from="1700853711936" duration="287000" />
+      <workItem from="1700854410726" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="Update file dictionary.txt and import file">
       <option name="closed" value="true" />

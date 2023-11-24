@@ -66,6 +66,58 @@ public class DatabaseManager {
     }
 
     /**
+     * Xóa một từ vựng khỏi bảng English của cơ sở dữ liệu.
+     *
+     * @param word Từ vựng cần xóa.
+     */
+    public static void deleteWord(String word) {
+        try {
+            String sql = "DELETE FROM English WHERE Word = ?";
+            assert connection != null;
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, word);
+
+                statement.executeUpdate();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    /**
+     * Cập nhật dữ liệu cho từ vựng có sẵn trong bảng English của cơ sở dữ liệu.
+     *
+     * @param word         Từ vựng cần cập nhật.
+     * @param type         Loại từ mới.
+     * @param meaning      Ý nghĩa mới.
+     * @param pronunciation Phát âm mới.
+     * @param example      Ví dụ mới.
+     * @param synonym      Từ đồng nghĩa mới.
+     * @param antonyms     Từ trái nghĩa mới.
+     */
+    public static void updateWord(String word, String type, String meaning, String pronunciation, String example, String synonym, String antonyms) {
+        try {
+            String sql = "UPDATE English SET Type = ?, Meaning = ?, Pronunciation = ?, Example = ?, Synonym = ?, Antonyms = ? WHERE Word = ?";
+            assert connection != null;
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, type);
+                statement.setString(2, meaning);
+                statement.setString(3, pronunciation);
+                statement.setString(4, example);
+                statement.setString(5, synonym);
+                statement.setString(6, antonyms);
+                statement.setString(7, word);
+
+                statement.executeUpdate();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    /**
      * Tìm kiếm từ trong bảng English và trả về thông tin chi tiết nếu tìm thấy.
      *
      * @param wordSearch Từ cần tìm kiếm.

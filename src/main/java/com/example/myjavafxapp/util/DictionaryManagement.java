@@ -207,6 +207,7 @@ public class DictionaryManagement {
 
         // Convert StringBuilder to byte array and write to file
         try {
+            Files.delete(Paths.get(path));
             Files.write(Paths.get(path), content.toString().getBytes(Charset.defaultCharset()));
             System.out.println("Export successful!");
         } catch (IOException e) {
