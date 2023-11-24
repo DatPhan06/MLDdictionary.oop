@@ -1,6 +1,7 @@
 package com.example.myjavafxapp.controller;
 
 import com.example.myjavafxapp.model.Word;
+import com.example.myjavafxapp.speechAPI.SpeechAPI;
 import com.example.myjavafxapp.sqlite.DatabaseManager;
 import com.example.myjavafxapp.util.DictionaryManagement;
 import javafx.event.ActionEvent;
@@ -510,6 +511,8 @@ public class Scene2Controller extends DictionaryController implements Initializa
     private void searchButtonAction() {
         // Logic khi nút search được nhấn
         String searchTerm = searchField.getText();
+        SpeechAPI speechAPI =  new SpeechAPI();
+        speechAPI.speak("en",searchTerm);
         try {
             Word result = performSearch(searchTerm);
             String result1 = DatabaseManager.searchWord(searchTerm);

@@ -3,10 +3,14 @@ package com.example.myjavafxapp.util;
 import com.example.myjavafxapp.model.Dictionary;
 import com.example.myjavafxapp.model.Word;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -208,12 +212,13 @@ public class DictionaryManagement {
         // Convert StringBuilder to byte array and write to file
         try {
             Files.delete(Paths.get(path));
-            Files.write(Paths.get(path), content.toString().getBytes(Charset.defaultCharset()));
+            Files.writeString(Paths.get(path), content.toString(), Charset.defaultCharset());
             System.out.println("Export successful!");
         } catch (IOException e) {
             throw new RuntimeException("Error exporting to file: " + e.getMessage(), e);
         }
     }
+
 
 
 //    // Hàm xuất ra tệp

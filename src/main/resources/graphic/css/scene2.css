@@ -4,12 +4,39 @@
     -fx-background-size: cover;
 }
 
+#wordTargetArea {
+    -fx-font-weight: bold;
+    -fx-border-width: 0;
+    -fx-control-inner-background: #7F528B;
+    -fx-font-size: 40px;
+    -fx-text-fill: #FFFFFF;
+}
+
+#tab {
+    -fx-border-width: 0;
+    -fx-control-inner-background: #7F528B;
+
+}
+#wordSoundArea {
+    -fx-border-width: 0;
+    -fx-control-inner-background: #7F528B;
+    -fx-font-size: 23px;
+    -fx-text-fill: #FFFFFF;
+}
+
+.text-area {
+    -fx-control-inner-background: #7F528B;
+    /*-fx-text-fill: #FFFFFF;*/
+    /*-fx-control-inner-background: black;*/
+}
+
 Button {
     -fx-background-color : rgba(0, 0, 0, 0);
     -fx-padding : 5px 10px;
     -fx-cursor : pointer;
     -fx-border-radius : 20px;
 }
+
 .class-button-color {
  -fx-font-size: 14px;
  -fx-text-fill: #ae0f9f
@@ -29,7 +56,7 @@ Button {
   -fx-background-radius: 20;
   -fx-padding : 5px 10px;
   -fx-font-size: 20px;
-  -fx-text-fill: #f4efef
+  -fx-text-fill: #f4efef;
 }
 .color-changing-button:pressed {
   -fx-background-color: #490F59;
