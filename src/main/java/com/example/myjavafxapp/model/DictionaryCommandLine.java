@@ -1,41 +1,50 @@
 package com.example.myjavafxapp.model;
 
-// Press Shift twice to open the Search Everywhere dialog and type show whitespaces,
-// then press Enter. You can now see whitespace characters in your code.
-
 import com.example.myjavafxapp.util.DictionaryManagement;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
 
+/**
+ * Lớp đại diện cho giao diện dòng lệnh của từ điển.
+ */
 public class DictionaryCommandLine {
+    /**
+     * Đối tượng quản lý từ điển.
+     */
     public static DictionaryManagement dictionaryManagement;
 
+    /**
+     * Lấy đối tượng quản lý từ điển.
+     *
+     * @return Đối tượng quản lý từ điển.
+     */
     public static DictionaryManagement getDictionaryManagement() {
         return dictionaryManagement;
     }
 
-    // Hàm chạy giao diện chính
+    /**
+     * Phương thức chạy giao diện dòng lệnh của từ điển.
+     */
     public void dictionaryAdvanced() {
         Scanner scanner = new Scanner(System.in);
-        // neu v thi chi hien o day thoi a?
         dictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEV.txt");
 
         while (true) {
-            System.out.println("Welcome to My Application!");
-            System.out.println("[0] Exit");
-            System.out.println("[1] Add");
-            System.out.println("[2] Remove");
-            System.out.println("[3] Update");
-            System.out.println("[4] Display");
-            System.out.println("[5] Lookup");
-            System.out.println("[6] Search");
-            System.out.println("[7] Game");
-            System.out.println("[8] Import from file");
-            System.out.println("[9] Export to file");
+            System.out.println("Chào mừng bạn đến với Ứng dụng của tôi!");
+            System.out.println("[0] Thoát");
+            System.out.println("[1] Thêm từ mới");
+            System.out.println("[2] Xóa từ");
+            System.out.println("[3] Sửa từ");
+            System.out.println("[4] Hiển thị danh sách từ");
+            System.out.println("[5] Tra cứu từ");
+            System.out.println("[6] Tìm kiếm từ");
+            System.out.println("[7] Chơi trò chơi");
+            System.out.println("[8] Nhập từ file");
+            System.out.println("[9] Xuất ra file");
 
-            System.out.print("Your action: ");
+            System.out.print("Hành động của bạn: ");
             String userAction = scanner.nextLine();
 
             if (userAction.matches("[0-9]")) {
@@ -43,190 +52,171 @@ public class DictionaryCommandLine {
 
                 switch (action) {
                     case 0:
-                        System.out.println("Exiting the application.");
+                        System.out.println("Thoát ứng dụng.");
                         scanner.close();
                         System.exit(0);
                         break;
                     case 1:
-                        // Thêm từ
                         dictionaryManagement.insertFromCommandLine();
-                        System.out.println("Word added successfully!");
+                        System.out.println("Thêm từ thành công!");
                         break;
                     case 2:
-                        // Xóa từ
                         removeWord();
                         break;
                     case 3:
-                        // Sửa từ
                         updateWord();
                         break;
                     case 4:
-                        // Hiển thị danh sách từ
                         showAllWords();
                         break;
                     case 5:
-                        // Tra cứu
 //                        lookupWord();
                         break;
                     case 6:
-                        // Tìm kiếm
                         dictionarySearcher();
                         break;
                     case 7:
-                        // Truy cập phần Game
-                        startGame();
+//                        startGame();
                         break;
                     case 8:
-                        // Nhập danh sách từ từ tệp
                         importFromFile();
                         break;
                     case 9:
-                        // Xuất dữ liệu danh sách từ ra tệp
-//                        exportToFile();
+                        //exportToFile();
                         break;
                     default:
-                        System.out.println("Action not supported. Please enter a valid number (0-9).");
+                        System.out.println("Hành động không được hỗ trợ. Vui lòng nhập số hợp lệ (0-9).");
                         break;
                 }
             } else {
-                System.out.println("Action not supported. Please enter a valid number (0-9).");
+                System.out.println("Hành động không được hỗ trợ. Vui lòng nhập số hợp lệ (0-9).");
             }
         }
     }
 
-    // Hàm khởi tạo
+    /**
+     * Hàm khởi tạo của DictionaryCommandLine.
+     */
     public DictionaryCommandLine() {
-
         dictionaryManagement = new DictionaryManagement();
     }
 
-    // Hàm hiện ra toàn bộ từ
+    /**
+     * Phương thức hiển thị toàn bộ từ trong từ điển.
+     */
     public void showAllWords() {
         ArrayList<Word> words = dictionaryManagement.getDictionary().getAllWords();
         words.sort(Comparator.comparing(Word::getWordTarget));
 
-        System.out.println("No | English | Vietnamese");
+        System.out.println("STT | Tiếng Anh | Tiếng Việt");
         for (int i = 0; i < words.size(); i++) {
             Word word = words.get(i);
-            System.out.println((i + 1) + " | " + word.getWordTarget() + " | " + word.getWordExplain());
+            System.out.println((i + 1) + " | " + word.getWordTarget() + " | " + word.getWordSound() + "|" + word.getWordExplain());
         }
     }
 
-    // Hàm xóa từ
+    /**
+     * Phương thức xóa từ khỏi từ điển.
+     */
     public void removeWord() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the word to remove: ");
+        System.out.print("Nhập từ cần xóa: ");
         String wordToRemove = scanner.nextLine();
 
         if (DictionaryManagement.removeWord(wordToRemove.trim())) {
-            System.out.println("Word removed successfully!");
+            System.out.println("Xóa từ thành công!");
         } else {
-            System.out.println("Word not found in the dictionary.");
+            System.out.println("Từ không tồn tại trong từ điển.");
         }
     }
 
-    // Hàm sửa từ
+    /**
+     * Phương thức sửa từ trong từ điển.
+     */
     public void updateWord() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the word to update: ");
+        System.out.print("Nhập từ cần sửa: ");
         String wordToUpdate = scanner.nextLine();
 
-        System.out.print("Enter the new definition: ");
+        System.out.print("Nhập sound mới: ");
+        String newSound = scanner.nextLine();
+
+        System.out.print("Nhập định nghĩa mới: ");
         String newDefinition = scanner.nextLine();
 
-        if (DictionaryManagement.updateWord(wordToUpdate.trim(),"", newDefinition.trim())) {
-            System.out.println("Word updated successfully!");
+        if (DictionaryManagement.updateWord(wordToUpdate.trim(), newSound.trim(), newDefinition.trim())) {
+            System.out.println("Sửa từ thành công!");
         } else {
-            System.out.println("Word not found in the dictionary.");
+            System.out.println("Từ không tồn tại trong từ điển.");
         }
     }
 
-     // Hàm check đúng từ
-//    public void lookupWord() {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.print("Enter the word to look up: ");
-//        String wordToLookup = scanner.nextLine();
-//
-//        Word foundWord = dictionaryManagement.dictionaryLookup(wordToLookup.trim());
-//        if (foundWord != null) {
-//            System.out.println("Definition: " + foundWord.getWordExplain());
-//        } else {
-//            System.out.println("Word not found in the dictionary.");
-//        }
-//    }
-
-    // Modify the lookupWord() method to accept a search term as a parameter
+    /**
+     * Phương thức tra cứu từ trong từ điển.
+     *
+     * @param wordToLookup Từ cần tra cứu.
+     * @return Đối tượng Word nếu từ được tìm thấy, ngược lại trả về null.
+     */
     public Word lookupWord(String wordToLookup) {
-        Word foundWord = DictionaryManagement.dictionaryLookup(wordToLookup.trim());
+        Word foundWord = dictionaryManagement.dictionaryLookup(wordToLookup.trim());
         if (foundWord != null) {
-            System.out.println("Vietnamese is " + foundWord.getWordExplain());
+            System.out.println("Âm thanh là " + foundWord.getWordSound());
+            System.out.println("Tiếng Việt là " + foundWord.getWordExplain());
         } else {
-            System.out.println("Word not found in the dictionary.");
+            System.out.println("Từ không tồn tại trong từ điển.");
         }
         return foundWord;
     }
 
-
-    // Hàm tra từ
+    /**
+     * Phương thức tìm kiếm từ trong từ điển.
+     */
     public void dictionarySearcher() {
-        System.out.print("Enter the search term: ");
+        System.out.print("Nhập từ cần tìm kiếm: ");
         Scanner scanner = new Scanner(System.in);
         String searchTerm = scanner.nextLine();
-        ArrayList<Word> matchingWords = DictionaryManagement.searchWords(searchTerm.trim());
+        ArrayList<Word> matchingWords = dictionaryManagement.searchWords(searchTerm.trim());
 
         if (!matchingWords.isEmpty()) {
-            System.out.println("Matching words:");
+            System.out.println("Các từ phù hợp:");
             for (Word word : matchingWords) {
-                System.out.println("English: " + word.getWordTarget() + " | Vietnamese: " + word.getWordExplain());
+                System.out.println("Tiếng Anh: " + word.getWordTarget() + "Cách đọc: " + word.getWordSound()+ " | Tiếng Việt: " + word.getWordExplain());
             }
         } else {
-            System.out.println("No matching words found.");
+            System.out.println("Không tìm thấy từ phù hợp.");
         }
-
     }
 
-    // Hàm nhập dữ liệu từ file
-    public void importFromFile(){
+    /**
+     * Phương thức nhập dữ liệu từ file.
+     */
+    public void importFromFile() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the file path to import: ");
+        System.out.print("Nhập đường dẫn file cần nhập: ");
         String importFilePath = scanner.nextLine();
-        dictionaryManagement.insertFromFile(importFilePath);
+        DictionaryManagement.insertFromFile(importFilePath);
     }
 
-//    // Hàm xuất dữ liệu ra file
-//    public void exportToFile(){
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.print("Enter the file path to export: ");
-//        String exportFilePath = scanner.nextLine();
-//        dictionaryManagement.dictionaryExportToFile(exportFilePath);
-//    }
-
-    // Hàm chơi trò chơi
-
-    // Hàm gọi trò chơi
+    /**
+     * Phương thức chơi trò chơi từ điển.
+     */
 //    public void startGame() {
-//        System.out.println("Welcome to the Game!");
-//        System.out.print("Choose the number of questions: ");
+//        System.out.println("Chào mừng bạn đến với Trò chơi!");
+//        System.out.print("Chọn số lượng câu hỏi: ");
 //        Scanner scanner = new Scanner(System.in);
 //        int numberOfQuestions = scanner.nextInt();
-//        Game game = new Game(dictionaryManagement);
+//        scanner.nextLine(); // Để loại bỏ ký tự newline sau khi nhập số
+//        WordGame game = new WordGame(dictionaryManagement);
 //        game.playGame(numberOfQuestions);
 //    }
 
-    public void startGame() {
-        System.out.println("Chào mừng bạn đến với Trò chơi!");
-        System.out.print("Chọn số lượng câu hỏi: ");
-        Scanner scanner = new Scanner(System.in);
-        int numberOfQuestions = scanner.nextInt();
-        scanner.nextLine(); // Để loại bỏ ký tự newline sau khi nhập số
-        WordGame game = new WordGame(dictionaryManagement);
-        game.playGame(numberOfQuestions);
-    }
-
-    // Chương trình chính
+    /**
+     * Chương trình chính.
+     *
+     * @param args Tham số dòng lệnh.
+     */
     public static void main(String[] args) {
         DictionaryCommandLine dictionaryCommandLine = new DictionaryCommandLine();
         dictionaryCommandLine.dictionaryAdvanced();
     }
 }
-

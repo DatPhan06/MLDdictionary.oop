@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Blend?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<HBox prefHeight="800" prefWidth="1280.0" stylesheets="@../../../graphic/css/scene4.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavafxapp.controller.Scene4Controller">
+<HBox prefHeight="800" prefWidth="1280.0" stylesheets="@../../../graphic/css/scene4.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavafxapp.controller.Scene4Controller">
 
     <VBox id="taskbar" prefHeight="800.0" prefWidth="298.0" spacing="10">
         <Pane prefHeight="182.0" prefWidth="200.0" />
@@ -24,20 +18,23 @@
         <Button layoutX="14.0" layoutY="161.0" onAction="#switchToScene2" prefHeight="50.0" prefWidth="247.0" styleClass="class-button" text="Search">
             <font>
                 <Font size="14.0" />
-            </font></Button>
+            </font>
+        </Button>
         <Button layoutX="14.0" layoutY="120.0" onAction="#switchToScene3" prefHeight="50.0" prefWidth="250.0" styleClass="class-button" text="Translate">
             <font>
                 <Font size="14.0" />
-            </font></Button>
+            </font>
+        </Button>
         <Button layoutX="14.0" layoutY="200.0" prefHeight="50.0" prefWidth="250.0" styleClass="class-button-color" text="Game">
             <font>
                 <Font size="14.0" />
-            </font></Button>
+            </font>
+        </Button>
         <Pane prefHeight="88.0" prefWidth="255.0" />
         <Button mnemonicParsing="false" onAction="#switchToScene5" prefHeight="52.0" prefWidth="254.0" styleClass="class-button" text="Grammar" />
         <Button mnemonicParsing="false" onAction="#switchToScene6" prefHeight="43.0" prefWidth="254.0" styleClass="class-button" text="Vocabulary" />
         <Button mnemonicParsing="false" onAction="#switchToScene7" prefHeight="50.0" prefWidth="233.0" styleClass="class-button" text="Help" />
-        <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="236.0" styleClass="class-button" text="Exit " />
+        <Button mnemonicParsing="false" onAction="#showExitConfirmation" prefHeight="34.0" prefWidth="236.0" styleClass="class-button" text="Exit " />
     </VBox>
     <Pane prefHeight="800.0" prefWidth="27.0" />
     <VBox prefHeight="800.0" prefWidth="388.0">
@@ -86,27 +83,19 @@
             <TextField alignment="BOTTOM_LEFT" promptText="Learning English will become simple and interesting when combining " />
             <TextField alignment="TOP_LEFT" prefHeight="26.0" prefWidth="388.0" promptText="learning and playing through this game..." />
             <Pane prefHeight="70.0" prefWidth="650.0" />
-         <HBox prefHeight="100.0" prefWidth="200.0">
-            <children>
-               <Pane prefHeight="100.0" prefWidth="129.0" />
-         
-                 <Button onAction="#startWordGame" styleClass="class-button-color" text="Start Game" />
-            </children>
-         </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Pane prefHeight="100.0" prefWidth="129.0" />
+
+                    <Button onAction="#startWordGame" styleClass="class-button-color" text="Start Game" />
+                </children>
+            </HBox>
         </children>
     </VBox>
-    <VBox prefHeight="759.0" prefWidth="379.0">
-        <children>
-            <Pane prefHeight="200.0" prefWidth="200.0" />
-            <ImageView fitHeight="320.0" fitWidth="377.0" pickOnBounds="true" preserveRatio="true" />
-        </children>
-      <Pane prefHeight="20.0" prefWidth="379.0" />
-      <ImageView fitHeight="438.0" fitWidth="379.0" pickOnBounds="true" preserveRatio="true">
+     <ImageView fitHeight="637.0" fitWidth="568.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../graphic/img/MimGame.jpg" />
+             <Image url="@../../../graphic/img/MimGame.jpg" />
          </image>
-      </ImageView>
-      <Pane prefHeight="390.0" prefWidth="379.0" />
-    </VBox>
+     </ImageView>
 
 </HBox>

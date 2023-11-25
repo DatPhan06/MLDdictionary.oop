@@ -4,6 +4,7 @@ import com.example.myjavafxapp.model.Word;
 import com.example.myjavafxapp.speechAPI.SpeechAPI;
 import com.example.myjavafxapp.sqlite.DatabaseManager;
 import com.example.myjavafxapp.util.DictionaryManagement;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -611,6 +612,22 @@ public class Scene2Controller extends DictionaryController implements Initializa
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
+    }
+
+    @FXML
+    private void showExitConfirmation() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit Confirmation");
+        alert.setHeaderText("Confirm Exit");
+        alert.setContentText("Are you sure you want to exit?");
+
+        // Get the result of the alert (OK or Cancel)
+        alert.showAndWait().ifPresent(response -> {
+            if (response == ButtonType.OK) {
+                // If OK is pressed, exit the application
+                Platform.exit();
+            }
+        });
     }
 
 

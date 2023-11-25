@@ -3,14 +3,12 @@ package com.example.myjavafxapp.util;
 import com.example.myjavafxapp.model.Dictionary;
 import com.example.myjavafxapp.model.Word;
 
-import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -147,22 +145,22 @@ public class DictionaryManagement {
         }
     }
 
-//     // Hàm nhập từ tệp
-//    public void insertFromFile(String filePath) {
-//        try (Scanner fileScanner = new Scanner(new File(filePath))) {
-//            while (fileScanner.hasNextLine()) {
-//                String line = fileScanner.nextLine();
-//                String[] parts = line.split("\t\t"); // Giả sử từ và nghĩa được phân tách bằng 2 dấu tab
-//                if (parts.length == 2) {
-//                    Word word = new Word(parts[0], parts[1]);
-//                    dictionary.addWord(word);
-//                }
-//            }
-//            System.out.println("Import successful!");
-//        } catch (FileNotFoundException e) {
-//            System.out.println("File not found.");
-//        }
-//    }
+     // Hàm nhập từ tệp
+    public void insertFromFile1(String filePath) {
+        try (Scanner fileScanner = new Scanner(new File(filePath))) {
+            while (fileScanner.hasNextLine()) {
+                String line = fileScanner.nextLine();
+                String[] parts = line.split("\t\t"); // Giả sử từ và nghĩa được phân tách bằng 2 dấu tab
+                if (parts.length == 2) {
+                    Word word = new Word(parts[0], parts[1]);
+                    dictionary.addWord(word);
+                }
+            }
+            System.out.println("Import successful!");
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found.");
+        }
+    }
 
 
 //     // Hàm nhập từ tệp

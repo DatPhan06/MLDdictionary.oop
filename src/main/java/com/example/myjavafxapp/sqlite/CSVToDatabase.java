@@ -9,10 +9,25 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * A utility class for reading data from a CSV file and inserting it into a SQLite database.
+ */
 public class CSVToDatabase {
 
+
+    /**
+     * The SQLite database connection.
+     */
     private static final Connection connection = SQLiteConnector.connect();
 
+    /**
+     * The main method that initiates the process of reading data from a CSV file
+     * and inserting it into the SQLite database.
+     *
+     * @param args Command line arguments (not used in this application).
+     * @throws SQLException          If a database access error occurs.
+     * @throws FileNotFoundException If the specified file is not found.
+     */
     public static void main(String[] args) throws SQLException, FileNotFoundException {
         String csvFile = "src/main/resources/csv/E-Edictionary.csv"; // Đường dẫn tới file CSV
 
@@ -21,6 +36,15 @@ public class CSVToDatabase {
 
     }
 
+
+    /**
+     * Inserts data from a CSV file into the specified SQLite database.
+     *
+     * @param connection The SQLite database connection.
+     * @param csvFile    The path to the CSV file.
+     * @throws SQLException          If a database access error occurs.
+     * @throws FileNotFoundException If the specified file is not found.
+     */
 
     static void insertDataFromCSV(Connection connection, String csvFile) throws SQLException, FileNotFoundException {
         try (CSVReader reader = new CSVReader(new FileReader(csvFile))) {

@@ -11,6 +11,32 @@ Button {
     -fx-border-radius : 20px;
 }
 
+#searchField {
+    -fx-font-weight: bold;
+    -fx-read-only: true;
+    -fx-focus-traversable: false;
+}
+
+#inputTextArea {
+    -fx-font-weight: bold;
+    -fx-border-width: 2;
+    -fx-control-inner-background: #7F528B;
+    -fx-font-size: 40px;
+    -fx-text-fill: #FFFFFF;
+    /*-fx-max-width: 650.0;*/
+    -fx-wrap-text: true; /* Cho phép tự động xuống dòng */
+}
+
+#resultTextArea {
+    -fx-font-weight: bold;
+    -fx-border-width: 2;
+    -fx-control-inner-background: #7F528B;
+    -fx-font-size: 40px;
+    -fx-text-fill: #FFFFFF;
+    /*-fx-max-width: 650.0;*/
+    -fx-wrap-text: true; /* Cho phép tự động xuống dòng */
+}
+
 .class-button-color {
  -fx-font-size: 14px;
  -fx-text-fill: #ae0f9f

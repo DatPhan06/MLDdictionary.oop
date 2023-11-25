@@ -22,7 +22,7 @@ public class WordGame {
 
     public WordGame(DictionaryManagement dictionaryManagement) {
         this.dictionaryManagement = dictionaryManagement;
-        DictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
+        dictionaryManagement.insertFromFile1("src/main/resources/txt/dictionaryEV.txt");
         this.score = 0;
         this.random = new Random();
         // Initialize the word list with a shuffled list of all words from the dictionary
@@ -39,14 +39,14 @@ public class WordGame {
     }
 
     public boolean checkAnswer(String wordTarget, String userAnswer) {
-        Word word = DictionaryManagement.dictionaryLookup(wordTarget);
+        Word word = dictionaryManagement.dictionaryLookup(wordTarget);
         System.out.println(word);
         if (word != null && word.getWordExplain().equalsIgnoreCase(userAnswer)) {
             score++;
             return true;
         }else {
             // Thêm câu trả lời sai vào danh sách
-            wrongAnswers.add(userAnswer);
+            wrongAnswers.add(wordTarget + " " + word.getWordExplain());
             return false;
         }
 

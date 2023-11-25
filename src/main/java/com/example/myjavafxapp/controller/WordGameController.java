@@ -5,6 +5,7 @@ import com.example.myjavafxapp.model.WordGame;
 import com.example.myjavafxapp.util.DictionaryManagement;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -95,7 +96,7 @@ public class WordGameController extends DictionaryController{
 
     public void initialize() {
         DictionaryManagement dictionaryManagement = new DictionaryManagement();
-        DictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
+        dictionaryManagement.insertFromFile1("src/main/resources/txt/dictionaryEV.txt");
         wordGame = new WordGame(dictionaryManagement);
         timeLeft = 50; // Đặt thời gian ban đầu là 60 giây
         // Khởi tạo ToggleGroup
@@ -252,5 +253,21 @@ public class WordGameController extends DictionaryController{
         // Cập nhật điểm số vào resultLabel hoặc một Label khác dành cho điểm
         resultLabel.setText("Điểm: " + wordGame.getScore());
 
+    }
+
+    @FXML
+    private void showExitConfirmation() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit Confirmation");
+        alert.setHeaderText("Confirm Exit");
+        alert.setContentText("Are you sure you want to exit?");
+
+        // Get the result of the alert (OK or Cancel)
+        alert.showAndWait().ifPresent(response -> {
+            if (response == ButtonType.OK) {
+                // If OK is pressed, exit the application
+                Platform.exit();
+            }
+        });
     }
 }

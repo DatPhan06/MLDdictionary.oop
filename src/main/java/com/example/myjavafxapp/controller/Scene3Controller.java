@@ -2,19 +2,21 @@ package com.example.myjavafxapp.controller;
 
 import com.example.myjavafxapp.speechAPI.SpeechAPI;
 import com.example.myjavafxapp.translator.Translate;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Scene3Controller extends DictionaryController{
+/**
+ * Controller cho Scene 3 của ứng dụng JavaFX.
+ */
+public class Scene3Controller extends DictionaryController {
 
     @FXML
     private ChoiceBox<String> yourChoiceBox;
@@ -27,14 +29,24 @@ public class Scene3Controller extends DictionaryController{
 
     @FXML
     private Button translateButton;
+
     @FXML
     private Stage primaryStage;
 
-
+    /**
+     * Thiết lập primaryStage từ bên ngoài.
+     *
+     * @param primaryStage Stage chính của ứng dụng.
+     */
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
 
+    /**
+     * Xử lý sự kiện khi nút dịch được nhấn.
+     *
+     * @throws IOException Nếu có lỗi trong quá trình dịch.
+     */
     @FXML
     private void translateButtonAction() throws IOException {
 
@@ -46,7 +58,6 @@ public class Scene3Controller extends DictionaryController{
         if (languageChoice == null) {
             languageChoice = "Vietnam vi";
         }
-//        SpeechAPI speechAPI = new SpeechAPI();
 
         // Tìm vị trí của dấu cách cuối cùng
         int lastIndex = languageChoice.lastIndexOf(' ');
@@ -60,13 +71,15 @@ public class Scene3Controller extends DictionaryController{
             System.out.println(languageChoice);
         }
         result = Translate.translate(result1, searchTerm);
-//            speechAPI.speak(result1, result);
-
-//        String result = performTranslate(searchTerm);
 
         resultTextArea.setText(result);
     }
 
+    /**
+     * Xử lý sự kiện khi nút nói được nhấn.
+     *
+     * @throws IOException Nếu có lỗi trong quá trình nói.
+     */
     @FXML
     private void SpeechAction() throws IOException {
 
@@ -89,54 +102,88 @@ public class Scene3Controller extends DictionaryController{
             System.out.println(languageChoice);
         } else {
             // Nếu không có dấu cách, in ra chuỗi gốc
-            System.out.println(languageChoice.substring(languageChoice.length()-2));
+            System.out.println(languageChoice.substring(languageChoice.length() - 2));
         }
         speechAPI.speak(result1, textresult);
-
-//        String result = performTranslate(searchTerm);
-
-
     }
 
+    /**
+     * Xử lý sự kiện khi người dùng chọn từ ngôn ngữ.
+     *
+     * @return Giá trị được chọn trong ChoiceBox.
+     */
     @FXML
     private String handleChoiceBoxAction() {
         String selectedValue = yourChoiceBox.getValue();
         return selectedValue;
-
-        // Now you can use the selectedValue as needed.
     }
 
-//
-//    private String performTranslate(String searchTerm) throws IOException {
-//        // Logic tìm kiếm từ
-//
-//        return GoogleTranslate.translate("vi", searchTerm);
-//    }
-
+    /**
+     * Chuyển đến Scene 1 khi người dùng nhấn nút.
+     *
+     * @param event Sự kiện được kích hoạt khi người dùng nhấn nút.
+     * @throws Exception Nếu có lỗi trong quá trình chuyển Scene.
+     */
     public void switchToScene1(ActionEvent event) throws Exception {
         loadScene("Scene1.fxml");
     }
 
+    /**
+     * Chuyển đến Scene 2 khi người dùng nhấn nút.
+     *
+     * @param event Sự kiện được kích hoạt khi người dùng nhấn nút.
+     * @throws Exception Nếu có lỗi trong quá trình chuyển Scene.
+     */
     public void switchToScene2(ActionEvent event) throws Exception {
         loadScene("Scene2.fxml");
     }
 
+    /**
+     * Chuyển đến Scene 4 khi người dùng nhấn nút.
+     *
+     * @param event Sự kiện được kích hoạt khi người dùng nhấn nút.
+     * @throws Exception Nếu có lỗi trong quá trình chuyển Scene.
+     */
     public void switchToScene4(ActionEvent event) throws Exception {
         loadScene("Scene4.fxml");
     }
 
+    /**
+     * Chuyển đến Scene 5 khi người dùng nhấn nút.
+     *
+     * @param event Sự kiện được kích hoạt khi người dùng nhấn nút.
+     * @throws Exception Nếu có lỗi trong quá trình chuyển Scene.
+     */
     public void switchToScene5(ActionEvent event) throws Exception {
         loadScene("Scene5.fxml");
     }
 
+    /**
+     * Chuyển đến Scene 6 khi người dùng nhấn nút.
+     *
+     * @param event Sự kiện được kích hoạt khi người dùng nhấn nút.
+     * @throws Exception Nếu có lỗi trong quá trình chuyển Scene.
+     */
     public void switchToScene6(ActionEvent event) throws Exception {
         loadScene("Scene6.fxml");
     }
 
+    /**
+     * Chuyển đến Scene 7 khi người dùng nhấn nút.
+     *
+     * @param event Sự kiện được kích hoạt khi người dùng nhấn nút.
+     * @throws Exception Nếu có lỗi trong quá trình chuyển Scene.
+     */
     public void switchToScene7(ActionEvent event) throws Exception {
         loadScene("Scene7.fxml");
     }
 
+    /**
+     * Load Scene mới từ file FXML và thiết lập primaryStage cho controller tương ứng.
+     *
+     * @param fxmlFileName Tên file FXML của Scene mới.
+     * @throws Exception Nếu có lỗi trong quá trình load Scene.
+     */
     private void loadScene(String fxmlFileName) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/myjavafxapp/" + fxmlFileName));
         Parent root = loader.load();
@@ -161,6 +208,22 @@ public class Scene3Controller extends DictionaryController{
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
+    }
+
+    @FXML
+    private void showExitConfirmation() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit Confirmation");
+        alert.setHeaderText("Confirm Exit");
+        alert.setContentText("Are you sure you want to exit?");
+
+        // Get the result of the alert (OK or Cancel)
+        alert.showAndWait().ifPresent(response -> {
+            if (response == ButtonType.OK) {
+                // If OK is pressed, exit the application
+                Platform.exit();
+            }
+        });
     }
 
 }

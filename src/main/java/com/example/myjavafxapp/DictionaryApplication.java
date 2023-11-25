@@ -63,7 +63,7 @@ public class DictionaryApplication extends Application {
             System.out.println(e);
         }
         launch(args);
-        DictionaryManagement.exportToFile("src/main/resources/txt/dictionaryEVplus.txt");
+        DictionaryManagement.exportToFile("src/main/resources/txt/dictionaryEVout.txt");
 
     }
 }

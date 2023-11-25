@@ -29,5 +29,8 @@ Button {
 
 .checkButton:hover {
     -fx-background-color: #425990;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
 }
 
