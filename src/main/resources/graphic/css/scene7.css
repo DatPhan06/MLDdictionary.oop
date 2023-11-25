@@ -1,5 +1,5 @@
 .root {
-    -fx-background-image: url('../img/BackHelp.png');
+    -fx-background-image: url('../img/help.png');
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }
