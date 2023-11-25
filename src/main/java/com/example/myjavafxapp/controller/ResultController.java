@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Controller cho cửa sổ hiển thị kết quả của trò chơi.
  */
-public class ResultController {
+public class ResultController extends DictionaryController{
 
     /**
      * Nhãn hiển thị điểm số.
@@ -54,5 +54,15 @@ public class ResultController {
     public void closeResult(ActionEvent actionEvent) {
         // Thêm logic xử lý khi người dùng muốn đóng cửa sổ kết quả.
         Platform.exit();
+    }
+
+    /**
+     * Phương thức trừu tượng để thiết lập primaryStage từ bên ngoài.
+     *
+     * @param primaryStage Stage chính của ứng dụng.
+     */
+    @Override
+    public void setPrimaryStage(Stage primaryStage) {
+
     }
 }

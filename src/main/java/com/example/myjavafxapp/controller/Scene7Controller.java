@@ -156,14 +156,7 @@ public class Scene7Controller extends DictionaryController {
         loadScene("Scene1.fxml");
     }
 
-    /**
-     * Chuyển đến Scene 1 khi người dùng nhấn nút.
-     *
-     * @throws Exception Nếu có lỗi trong quá trình chuyển Scene.
-     */
-    public void switchToScene1() throws Exception {
-        loadScene("Scene1.fxml");
-    }
+
 
     /**
      * Chuyển đến Scene 2 khi người dùng nhấn nút.

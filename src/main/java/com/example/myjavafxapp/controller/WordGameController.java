@@ -19,7 +19,7 @@ import javafx.util.Duration;
 import java.io.IOException;
 import java.util.List;
 
-public class WordGameController {
+public class WordGameController extends DictionaryController {
 
     @FXML
     private RadioButton optionA;

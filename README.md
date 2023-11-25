@@ -7,6 +7,14 @@ Project Từ điển offline và online.
 2. Phan Tiến Đạt - K67T-CLC - Khoa CNTT - UET
 3. Trần Thị Hoa Mai - K67CA-CLC3 - Khoa CNTT - UET
 
+# Cây thừa kế: 
+- Cây có quan hệ has-a và is-a:
+![Cây thừa kế](Cây%20thừa%20kế.png)
+- Cây chỉ có quan hệ has-a:
+![Search Image](Cây%20thừa%20kế(no%20has-a).png)
+
+
+
 # Thông tin dự án : 
 
 - Sử dụng Ngôn ngữ lập tình Java

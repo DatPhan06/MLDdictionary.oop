@@ -4,42 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e785c23-0157-440b-a9d5-01518d109878" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/Exit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/GameResult.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/Grammar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/Help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-EnHello1Add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-EnHello1Change.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-EnHello1Search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-EnHello1SearchAfterChange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-EnHello1SearchAfterDelete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-EnPolyvalentSearch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-ViHello.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-ViHello1Add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-ViHello1Change.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-ViHello1Delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-ViHello1Search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-ViHello1SearchAfterChange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchEn-ViHello1SearchAfterDelete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/SearchHelp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/Test-Other.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/Test-Search.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/Test-Translate.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/Test-game.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/Translate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/TranslateToKorean.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/Vocabulary.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/game.png" afterDir="false" />
+    <list default="true" id="3e785c23-0157-440b-a9d5-01518d109878" name="Changes" comment="Set up the structure of the project">
+      <change afterPath="$PROJECT_DIR$/Cây thừa kế.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cây thừa kế.uml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/DictionaryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/DictionaryApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/ResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/ResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene7Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/Scene7Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/WordGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myjavafxapp/controller/WordGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Result.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myjavafxapp/Result.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/engData.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/engData.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/scene2.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/scene2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphic/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphic/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,27 +56,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Phan Tien Dat/OneDrive - vnu.edu.vn/Desktop/Workspace/MLDdictionary.oop/demo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gant&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Phan Tien Dat/OneDrive - vnu.edu.vn/Desktop/Workspace/MLDdictionary.oop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="data" />
@@ -176,7 +148,9 @@
       <workItem from="1700921287307" duration="435000" />
       <workItem from="1700921743343" duration="249000" />
       <workItem from="1700922006785" duration="3289000" />
-      <workItem from="1700925663649" duration="436000" />
+      <workItem from="1700925663649" duration="594000" />
+      <workItem from="1700926580836" duration="8231000" />
+      <workItem from="1700935410334" duration="775000" />
     </task>
     <task id="LOCAL-00001" summary="Update file dictionary.txt and import file">
       <option name="closed" value="true" />
