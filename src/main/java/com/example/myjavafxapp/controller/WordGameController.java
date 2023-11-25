@@ -14,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.util.List;
 
 public class WordGameController extends DictionaryController{
@@ -131,6 +132,34 @@ public class WordGameController extends DictionaryController{
         timeline.stop();
         resultLabel.setText("Hết thời gian!");
         checkButton.setDisable(true);
+
+        // Thu thập thông tin điểm số và câu trả lời sai
+        int score = wordGame.getScore();
+        List<String> wrongAnswers = wordGame.getWrongAnswers();
+
+        // Tạo FXMLLoader để nạp file FXML kết quả
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/myjavafxapp/result.fxml"));
+        Parent root;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+
+        // Lấy controller của cửa sổ kết quả
+        ResultController resultController = loader.getController();
+
+        // Truyền thông tin điểm số và câu trả lời sai vào controller của cửa sổ kết quả
+        resultController.setScore(score);
+        resultController.setWrongAnswers(wrongAnswers);
+
+        // Tạo và hiển thị cửa sổ kết quả
+        Stage resultStage = new Stage();
+        resultStage.setTitle("Kết quả trò chơi");
+        resultStage.setScene(new Scene(root));
+        resultStage.show();
+
     }
 
     private void updateTimerLabel() {

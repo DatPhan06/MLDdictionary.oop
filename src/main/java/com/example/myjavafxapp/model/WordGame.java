@@ -13,6 +13,13 @@ public class WordGame {
     private Random random;
     private List<Word> wordList;
 
+    private List<String> wrongAnswers;
+
+    // Thêm getter cho thuộc tính đó
+    public List<String> getWrongAnswers() {
+        return wrongAnswers;
+    }
+
     public WordGame(DictionaryManagement dictionaryManagement) {
         this.dictionaryManagement = dictionaryManagement;
         DictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
@@ -21,6 +28,7 @@ public class WordGame {
         // Initialize the word list with a shuffled list of all words from the dictionary
         this.wordList = dictionaryManagement.getDictionary().getAllWords();
         Collections.shuffle(wordList);
+        this.wrongAnswers = new ArrayList<>(); // Khởi tạo danh sách câu trả lời sai
     }
 
     public Word getRandomWord() {
@@ -36,8 +44,12 @@ public class WordGame {
         if (word != null && word.getWordExplain().equalsIgnoreCase(userAnswer)) {
             score++;
             return true;
+        }else {
+            // Thêm câu trả lời sai vào danh sách
+            wrongAnswers.add(userAnswer);
+            return false;
         }
-        return false;
+
     }
 
     public int getScore() {
