@@ -12,18 +12,31 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Quản lý từ điển, bao gồm các chức năng như thêm, xóa, cập nhật từ và tìm kiếm từ.
+ */
 public class DictionaryManagement {
     private static Dictionary dictionary = new Dictionary();
 
+    /**
+     * Hàm khởi tạo DictionaryManagement, tạo một đối tượng từ điển mới.
+     */
     public DictionaryManagement() {
         dictionary = new Dictionary();
     }
 
+    /**
+     * Lấy đối tượng Dictionary hiện tại.
+     *
+     * @return Đối tượng Dictionary.
+     */
     public Dictionary getDictionary() {
         return dictionary;
     }
 
-    // Hàm thêm từ mới từ commandline
+    /**
+     * Hàm nhập từ điển từ bàn phím.
+     */
     public void insertFromCommandLine() {
         Scanner scanner = new Scanner(System.in);
 
@@ -46,7 +59,12 @@ public class DictionaryManagement {
         }
     }
 
-    // Hàm xóa từ
+    /**
+     * Xóa một từ từ từ điển.
+     *
+     * @param wordToRemove Từ cần xóa.
+     * @return true nếu xóa thành công, ngược lại trả về false.
+     */
     public static boolean removeWord(String wordToRemove) {
         ArrayList<Word> words = dictionary.getAllWords();
 
@@ -60,7 +78,14 @@ public class DictionaryManagement {
         return false; // Trả về false nếu từ không tìm thấy
     }
 
-    // Hàm cập nhật từ
+    /**
+     * Cập nhật thông tin của một từ trong từ điển.
+     *
+     * @param wordToUpdate  Từ cần cập nhật.
+     * @param newWordSound  Âm thanh mới của từ.
+     * @param newDefinition Nghĩa mới của từ.
+     * @return true nếu cập nhật thành công, ngược lại trả về false.
+     */
     public static boolean updateWord(String wordToUpdate, String newWordSound, String newDefinition) {
         ArrayList<Word> words = dictionary.getAllWords();
 
@@ -75,7 +100,14 @@ public class DictionaryManagement {
         return false; // Trả về false nếu từ không tìm thấy
     }
 
-    // Hàm thêm từ
+    /**
+     * Thêm một từ mới vào từ điển.
+     *
+     * @param wordToAdd     Từ cần thêm.
+     * @param newWordSound  Âm thanh của từ mới.
+     * @param newDefinition Nghĩa của từ mới.
+     * @return true nếu thêm thành công, ngược lại trả về false.
+     */
     public static boolean addWord(String wordToAdd, String newWordSound, String newDefinition) {
         ArrayList<Word> words = dictionary.getAllWords();
         for (Word word : words)
@@ -88,7 +120,12 @@ public class DictionaryManagement {
 
     }
 
-    // Hàm tra từ
+    /**
+     * Tìm kiếm một từ trong từ điển.
+     *
+     * @param wordToLookup Từ cần tìm kiếm.
+     * @return Đối tượng Word nếu từ được tìm thấy, ngược lại trả về null.
+     */
     public static Word dictionaryLookup(String wordToLookup) {
         ArrayList<Word> words = dictionary.getAllWords();
 
@@ -101,7 +138,12 @@ public class DictionaryManagement {
         return null; // Trả về null nếu từ không tìm thấy
     }
 
-    // Hàm tìm kiếm từ
+    /**
+     * Tìm kiếm các từ trong từ điển bắt đầu bằng một tiền tố.
+     *
+     * @param prefix Tiền tố cần tìm kiếm.
+     * @return Danh sách các từ bắt đầu bằng tiền tố cho trước.
+     */
     public static ArrayList<Word> searchWords(String prefix) {
         ArrayList<Word> words = dictionary.getAllWords();
         ArrayList<Word> matchingWords = new ArrayList<>();
@@ -114,6 +156,11 @@ public class DictionaryManagement {
         return matchingWords;
     }
 
+    /**
+     * Đọc từ điển từ một tệp và thêm vào từ điển hiện tại.
+     *
+     * @param path Đường dẫn tới tệp chứa từ điển.
+     */
     public static void insertFromFile(String path) {
 
         byte[] encoded = new byte[0];
@@ -145,7 +192,11 @@ public class DictionaryManagement {
         }
     }
 
-     // Hàm nhập từ tệp
+    /**
+     * Nhập từ điển từ một tệp.
+     *
+     * @param filePath Đường dẫn tới tệp chứa từ điển.
+     */
     public void insertFromFile1(String filePath) {
         try (Scanner fileScanner = new Scanner(new File(filePath))) {
             while (fileScanner.hasNextLine()) {
@@ -162,25 +213,11 @@ public class DictionaryManagement {
         }
     }
 
-
-//     // Hàm nhập từ tệp
-//    public void insertFromFile(String filePath) {
-//        try (Scanner fileScanner = new Scanner(new File(filePath))) {
-//            while (fileScanner.hasNextLine()) {
-//                String line = fileScanner.nextLine();
-//                String[] parts = line.split("\t\t"); // Giả sử từ và nghĩa được phân tách bằng 2 dấu tab
-//                if (parts.length == 2) {
-//                    Word word = new Word(parts[0], parts[1]);
-//                    dictionary.addWord(word);
-//                }
-//            }
-//            System.out.println("Import successful!");
-//        } catch (FileNotFoundException e) {
-//            System.out.println("File not found.");
-//        }
-//    }
-
-
+    /**
+     * Xuất từ điển ra tệp.
+     *
+     * @param path Đường dẫn tới tệp xuất từ điển.
+     */
     public static void exportToFile(String path) {
         StringBuilder content = new StringBuilder();
         ArrayList<Word> words = dictionary.getAllWords();
@@ -216,20 +253,4 @@ public class DictionaryManagement {
             throw new RuntimeException("Error exporting to file: " + e.getMessage(), e);
         }
     }
-
-
-
-//    // Hàm xuất ra tệp
-//    public void dictionaryExportToFile(String filePath) {
-//        try (PrintWriter writer = new PrintWriter(filePath)) {
-//            ArrayList<Word> words = dictionary.getAllWords();
-//            for (Word word : words) {
-//                writer.println(word.getWordTarget() + "\t" + word.getWordExplain());
-//            }
-//            System.out.println("Export successful!");
-//        } catch (FileNotFoundException e) {
-//            System.out.println("Error exporting to file.");
-//        }
-//
-//    }
 }

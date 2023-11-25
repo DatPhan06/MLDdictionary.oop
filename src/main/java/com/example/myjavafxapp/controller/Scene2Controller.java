@@ -23,46 +23,83 @@ import java.util.ResourceBundle;
 
 public class Scene2Controller extends DictionaryController implements Initializable {
 
+    /**
+     * Trường TextField để nhập từ khóa tìm kiếm từ điển.
+     */
     @FXML
     private TextField searchField;
 
+    /**
+     * Trường TextField để hiển thị âm thanh của từ.
+     */
     @FXML
     private TextField wordSoundArea;
 
+    /**
+     * Trường TextField để hiển thị từ mục tiêu (target word).
+     */
     @FXML
     private TextField wordTargetArea;
 
+    /**
+     * Trường TextArea để hiển thị giải nghĩa của từ.
+     */
     @FXML
     private TextArea wordExplainArea;
 
+    /**
+     * Trường TextArea để hiển thị kết quả tìm kiếm từ điển hoặc thông tin chi tiết của từ.
+     */
     @FXML
     private TextArea resultArea;
 
+    /**
+     * Trường Button để kích hoạt tìm kiếm từ khóa.
+     */
     @FXML
     private Button searchButton;
 
-
+    /**
+     * Trường Stage chính của ứng dụng.
+     */
     @FXML
     private Stage primaryStage;
 
+    /**
+     * Trường Alert để hiển thị cảnh báo khi thêm từ mới vào từ điển.
+     */
     @FXML
-    private Alert AddcustomAlert; // Reference to the defined Alert
+    private Alert AddcustomAlert;
 
+    /**
+     * Trường Alert để hiển thị cảnh báo khi thêm từ mới vào cơ sở dữ liệu từ điển.
+     */
     @FXML
-    private Alert AddcustomAlert1; // Reference to the defined Alert
+    private Alert AddcustomAlert1;
 
+    /**
+     * Trường Alert để hiển thị cảnh báo khi thay đổi thông tin từ trong từ điển.
+     */
     @FXML
-    private Alert ChangecustomAlert; // Reference to the defined Alert
+    private Alert ChangecustomAlert;
 
+    /**
+     * Trường Alert để hiển thị cảnh báo khi thay đổi thông tin từ trong cơ sở dữ liệu từ điển.
+     */
     @FXML
-    private Alert ChangecustomAlert1; // Reference to the defined Alert
+    private Alert ChangecustomAlert1;
 
+    /**
+     * Trường Alert để hiển thị cảnh báo khi xóa từ khỏi từ điển.
+     */
     @FXML
-    private Alert DeletecustomAlert; // Reference to the defined Alert
+    private Alert DeletecustomAlert;
 
+    /**
+     * Trường Alert để hiển thị cảnh báo khi xóa từ khỏi cơ sở dữ liệu từ điển.
+     */
     @FXML
-    private Alert DeletecustomAlert1; // Reference to the defined Alert
-
+    private Alert DeletecustomAlert1;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Mặc định nội dung cho resultArea
@@ -75,59 +112,40 @@ public class Scene2Controller extends DictionaryController implements Initializa
                 "Antonyms: ");
     }
 
+    /**
+     * Hiển thị cảnh báo khi người dùng muốn sửa từ trong từ điển Anh - Việt.
+     */
     @FXML
     private void ChangeshowAlert() {
         ChangecustomAlert.setTitle("Change Word");
+        ChangecustomAlert.setHeaderText("Bạn có chắc chắn muốn sửa từ " + wordTargetArea.getText()
+                + " trong từ điển Anh - Việt không?");
 
-
-        ChangecustomAlert.setHeaderText("Bạn có chắc chắn muốn sửa từ " + wordTargetArea.getText() + " trong từ điển Anh - Việt không?");
-//        customAlert.setContentText("Hello, this is the content text!");
-//        // Tạo một ImageView để hiển thị biểu tượng
-//        ImageView imageView = new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/graphic/icon/change.png"))));
-//        imageView.setFitWidth(48); // Điều chỉnh kích thước của biểu tượng nếu cần
-//        // Thiết lập biểu tượng cho Stage
-//        Stage stage = (Stage) ChangecustomAlert.getDialogPane().getScene().getWindow();
-//        stage.getIcons().add(imageView.getImage());
-
-        // Customize the alert further if needed
-        // Add a "Cancel" button
-//        ButtonType cancelButtonType = new ButtonType("Cancel", ButtonType.CANCEL.getButtonData());
-//        customAlert.getButtonTypes().add(cancelButtonType);
-
-        // Show the alert and wait for user interaction
         Optional<ButtonType> result = ChangecustomAlert.showAndWait();
 
-        // Process the result
         if (result.isPresent() && result.get() == ButtonType.OK) {
             System.out.println("User clicked OK");
             if (Objects.equals(wordTargetArea.getText(), "")) {
                 System.out.println("Please insert Word!");
-//                System.out.println(wordTargetArea.getText());
-
             } else if (Objects.equals(wordSoundArea.getText(), "")) {
                 System.out.println("Please insert Word Sound!");
             } else if (Objects.equals(wordExplainArea.getText(), "")) {
                 System.out.println("Please insert Word Explain!");
             } else {
-//                System.out.println(wordTargetArea.getText());
-                changeNewWordToDictionary(wordTargetArea.getText(), wordSoundArea.getText(), wordExplainArea.getText());
+                changeNewWordToDictionary(wordTargetArea.getText(),
+                        wordSoundArea.getText(), wordExplainArea.getText());
             }
-            // Do something when OK is clicked
         } else {
             System.out.println("User clicked Cancel or closed the dialog");
-            // Do something when Cancel or closed
         }
     }
 
+    /**
+     * Hiển thị cảnh báo khi người dùng muốn sửa từ trong cơ sở dữ liệu từ điển Anh - Anh.
+     */
     @FXML
     private void ChangeshowAlert1() {
         ChangecustomAlert1.setTitle("Change Word");
-//        // Tạo một ImageView để hiển thị biểu tượng
-//        ImageView imageView = new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/graphic/icon/change.png"))));
-//        imageView.setFitWidth(48); // Điều chỉnh kích thước của biểu tượng nếu cần
-//        // Thiết lập biểu tượng cho Stage
-//        Stage stage = (Stage) ChangecustomAlert1.getDialogPane().getScene().getWindow();
-//        stage.getIcons().add(imageView.getImage());
         String[] lines = resultArea.getText().split("\n");
         String Word = "";
         String Type = "";
@@ -164,77 +182,52 @@ public class Scene2Controller extends DictionaryController implements Initializa
                     case "Antonyms":
                         Antonyms = value;
                         break;
-                    // Add more cases for other keys if needed
                 }
             }
         }
-        ChangecustomAlert1.setHeaderText("Bạn có chắc chắn muốn sửa từ " + Word + " trong cơ sở dữ liệu từ điển Anh - Anh không?");
-
-
-        // Customize the alert further if needed
-        // Add a "Cancel" button
-//        ButtonType cancelButtonType = new ButtonType("Cancel", ButtonType.CANCEL.getButtonData());
-//        customAlert.getButtonTypes().add(cancelButtonType);
-
-        // Show the alert and wait for user interaction
+        ChangecustomAlert1.setHeaderText("Bạn có chắc chắn muốn sửa từ " + Word
+                + " trong cơ sở dữ liệu từ điển Anh - Anh không?");
         Optional<ButtonType> result1 = ChangecustomAlert1.showAndWait();
 
-        // Process the result
         if (result1.isPresent() && result1.get() == ButtonType.OK) {
             System.out.println("User clicked OK");
             if (Objects.equals(resultArea.getText(), "")) {
                 System.out.println("Please insert Word!");
             } else {
-//                System.out.println(wordTargetArea.getText());
-
-                changeNewWordToDataBase(Word, Type, Meaning, Pronunciation, Example, Synonym, Antonyms);
-//                addNewWordToDataBase("", "", "", "", "", "", "");
-
+                changeNewWordToDataBase(Word, Type, Meaning,
+                        Pronunciation, Example, Synonym, Antonyms);
             }
-            // Do something when OK is clicked
         } else {
             System.out.println("User clicked Cancel or closed the dialog");
-            // Do something when Cancel or closed
         }
     }
 
+    /**
+     * Hiển thị cảnh báo khi người dùng muốn xóa từ khỏi từ điển Anh - Việt.
+     */
     @FXML
     private void DeleteshowAlert() {
         DeletecustomAlert.setTitle("Delete Word");
-        DeletecustomAlert.setHeaderText("Bạn có chắc chắn muốn xóa từ " + wordTargetArea.getText() + " trong từ điển Anh - Việt không?");
-//        customAlert.setContentText("Hello, this is the content text!");
-//        // Tạo một ImageView để hiển thị biểu tượng
-//        ImageView imageView = new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/graphic/icon/delete.png"))));
-//        imageView.setFitWidth(48); // Điều chỉnh kích thước của biểu tượng nếu cần
-//        // Thiết lập biểu tượng cho Stage
-//        Stage stage = (Stage) DeletecustomAlert.getDialogPane().getScene().getWindow();
-//        stage.getIcons().add(imageView.getImage());
+        DeletecustomAlert.setHeaderText("Bạn có chắc chắn muốn xóa từ "
+                + wordTargetArea.getText() + " trong từ điển Anh - Việt không?");
 
-        // Customize the alert further if needed
-        // Add a "Cancel" button
-//        ButtonType cancelButtonType = new ButtonType("Cancel", ButtonType.CANCEL.getButtonData());
-//        customAlert.getButtonTypes().add(cancelButtonType);
-
-        // Show the alert and wait for user interaction
         Optional<ButtonType> result = DeletecustomAlert.showAndWait();
 
-        // Process the result
         if (result.isPresent() && result.get() == ButtonType.OK) {
             System.out.println("User clicked OK");
             if (Objects.equals(wordTargetArea.getText(), "")) {
                 System.out.println("Please insert Word!");
-//                System.out.println(wordTargetArea.getText());
             } else {
-//                System.out.println(wordTargetArea.getText());
                 deleteNewWordFromDictionary(wordTargetArea.getText());
             }
-            // Do something when OK is clicked
         } else {
             System.out.println("User clicked Cancel or closed the dialog");
-            // Do something when Cancel or closed
         }
     }
 
+    /**
+     * Hiển thị cảnh báo khi người dùng muốn xóa từ khỏi cơ sở dữ liệu từ điển Anh - Anh.
+     */
     @FXML
     private void DeleteshowAlert1() {
         DeletecustomAlert1.setTitle("Delete Word");
@@ -274,56 +267,41 @@ public class Scene2Controller extends DictionaryController implements Initializa
                     case "Antonyms":
                         Antonyms = value;
                         break;
-                    // Add more cases for other keys if needed
                 }
             }
         }
+        DeletecustomAlert1.setHeaderText("Bạn có chắc chắn xóa sửa từ " + Word
+                + " trong cơ sở dữ liệu từ điển Anh - Anh không?");
 
-        DeletecustomAlert1.setHeaderText("Bạn có chắc chắn xóa sửa từ " + Word + " trong cơ sở dữ liệu từ điển Anh - Anh không?");
-
-//// Tạo một ImageView để hiển thị biểu tượng
-//        ImageView imageView = new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/graphic/icon/delete.png"))));
-//        imageView.setFitWidth(48); // Điều chỉnh kích thước của biểu tượng nếu cần
-//        // Thiết lập biểu tượng cho Stage
-//        Stage stage = (Stage) DeletecustomAlert.getDialogPane().getScene().getWindow();
-//        stage.getIcons().add(imageView.getImage());
-        // Customize the alert further if needed
-        // Add a "Cancel" button
-//        ButtonType cancelButtonType = new ButtonType("Cancel", ButtonType.CANCEL.getButtonData());
-//        customAlert.getButtonTypes().add(cancelButtonType);
-
-        // Show the alert and wait for user interaction
         Optional<ButtonType> result1 = DeletecustomAlert1.showAndWait();
 
-        // Process the result
         if (result1.isPresent() && result1.get() == ButtonType.OK) {
             System.out.println("User clicked OK");
             if (Objects.equals(resultArea.getText(), "")) {
                 System.out.println("Please insert Word!");
             } else {
-
                 deleteNewWordToDataBase(Word);
                 System.out.println("Word deleted");
-
-//                addNewWordToDataBase("", "", "", "", "", "", "");
-
             }
-            // Do something when OK is clicked
         } else {
             System.out.println("User clicked Cancel or closed the dialog");
-            // Do something when Cancel or closed
         }
     }
 
+    /**
+     * Xóa từ khỏi từ điển Anh - Việt.
+     */
     public void deleteNewWordFromDictionary(String wordTarget) {
         if (DictionaryManagement.removeWord(wordTarget.trim())) {
             System.out.println("Delete word successfully");
         } else {
             System.out.println("Can't delete word");
         }
-
     }
 
+    /**
+     * Xóa từ khỏi cơ sở dữ liệu từ điển Anh - Anh.
+     */
     public void deleteNewWordToDataBase(String Word) {
         try {
             DatabaseManager.deleteWord(Word);
@@ -331,80 +309,66 @@ public class Scene2Controller extends DictionaryController implements Initializa
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
     }
 
+    /**
+     * Sửa từ trong từ điển Anh - Việt.
+     */
     public void changeNewWordToDictionary(String wordTarget, String wordSound, String wordExplain) {
         if (DictionaryManagement.updateWord(wordTarget, wordSound, wordExplain)) {
             System.out.println("Change word successfully");
         } else {
             System.out.println("Can't change word");
         }
-
     }
 
-    public void changeNewWordToDataBase(String Word, String Type, String Meaning, String Pronunciation, String Example, String Synonym, String Antonyms) {
+    /**
+     * Sửa từ trong cơ sở dữ liệu từ điển Anh - Anh.
+     */
+    public void changeNewWordToDataBase(String Word, String Type, String Meaning,
+                                        String Pronunciation, String Example, String Synonym,
+                                        String Antonyms) {
         try {
             DatabaseManager.updateWord(Word, Type, Meaning, Pronunciation, Example, Synonym, Antonyms);
             System.out.println("Change word successfully");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
     }
 
-
+    /**
+     * Hiển thị cảnh báo khi người dùng muốn thêm từ vào từ điển Anh - Việt.
+     */
     @FXML
     private void AddshowAlert() {
         AddcustomAlert.setTitle("Add Word");
-        AddcustomAlert.setHeaderText("Bạn có chắc chắn muốn thêm từ " + wordTargetArea.getText() + " vào từ điển Anh - Việt không?");
-//        customAlert.setContentText("Hello, this is the content text!");
-//        // Tạo một ImageView để hiển thị biểu tượng
-//        ImageView imageView = new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/graphic/icon/add.png"))));
-//        imageView.setFitWidth(48); // Điều chỉnh kích thước của biểu tượng nếu cần
-//        // Thiết lập biểu tượng cho Stage
-//        Stage stage = (Stage) AddcustomAlert.getDialogPane().getScene().getWindow();
-//        stage.getIcons().add(imageView.getImage());
+        AddcustomAlert.setHeaderText("Bạn có chắc chắn muốn thêm từ "
+                + wordTargetArea.getText() + " vào từ điển Anh - Việt không?");
 
-        // Customize the alert further if needed
-        // Add a "Cancel" button
-//        ButtonType cancelButtonType = new ButtonType("Cancel", ButtonType.CANCEL.getButtonData());
-//        customAlert.getButtonTypes().add(cancelButtonType);
-
-        // Show the alert and wait for user interaction
         Optional<ButtonType> result = AddcustomAlert.showAndWait();
 
-        // Process the result
         if (result.isPresent() && result.get() == ButtonType.OK) {
             System.out.println("User clicked OK");
             if (Objects.equals(wordTargetArea.getText(), "")) {
                 System.out.println("Please insert Word!");
-//                System.out.println(wordTargetArea.getText());
-
             } else if (Objects.equals(wordSoundArea.getText(), "")) {
                 System.out.println("Please insert Word Sound!");
             } else if (Objects.equals(wordExplainArea.getText(), "")) {
                 System.out.println("Please insert Word Explain!");
             } else {
-//                System.out.println(wordTargetArea.getText());
                 addNewWordToDictionary(wordTargetArea.getText(), wordSoundArea.getText(), wordExplainArea.getText());
             }
-            // Do something when OK is clicked
         } else {
             System.out.println("User clicked Cancel or closed the dialog");
-            // Do something when Cancel or closed
         }
     }
 
+    /**
+     * Hiển thị cảnh báo khi người dùng muốn thêm từ vào cơ sở dữ liệu từ điển Anh - Anh.
+     */
     @FXML
     private void AddshowAlert1() {
         AddcustomAlert1.setTitle("Add Word");
-//        // Tạo một ImageView để hiển thị biểu tượng
-//        ImageView imageView = new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/graphic/icon/add.png"))));
-//        imageView.setFitWidth(48); // Điều chỉnh kích thước của biểu tượng nếu cần
-//        // Thiết lập biểu tượng cho Stage
-//        Stage stage = (Stage) AddcustomAlert1.getDialogPane().getScene().getWindow();
-//        stage.getIcons().add(imageView.getImage());
         String[] lines = resultArea.getText().split("\n");
 
         String Word = "";
@@ -442,13 +406,13 @@ public class Scene2Controller extends DictionaryController implements Initializa
                     case "Antonyms":
                         Antonyms = value;
                         break;
-                    // Add more cases for other keys if needed
                 }
             }
         }
 
-        AddcustomAlert1.setHeaderText("Bạn có chắc chắn muốn thêm từ " + Word + " vào cơ sở dữ liệu từ điển Anh - Anh không?");
-        AddcustomAlert1.setContentText("Hãy chắc chắn bạn nhập theo đúng định dạng(mỗi chữ cái 1 dòng): \n " +
+        AddcustomAlert1.setHeaderText("Bạn có chắc chắn muốn thêm từ " + Word
+                + " vào cơ sở dữ liệu từ điển Anh - Anh không?");
+        AddcustomAlert1.setContentText("Hãy chắc chắn bạn nhập theo đúng định dạng (mỗi chữ cái 1 dòng): \n " +
                 "Word: " + Word + "\n" +
                 "Type: " + Type + "\n" +
                 "Meaning: " + Meaning + "\n" +
@@ -457,41 +421,31 @@ public class Scene2Controller extends DictionaryController implements Initializa
                 "Synonym: " + Synonym + "\n" +
                 "Antonyms: " + Antonyms);
 
-        // Customize the alert further if needed
-        // Add a "Cancel" button
-//        ButtonType cancelButtonType = new ButtonType("Cancel", ButtonType.CANCEL.getButtonData());
-//        customAlert.getButtonTypes().add(cancelButtonType);
-
-        // Show the alert and wait for user interaction
         Optional<ButtonType> result1 = AddcustomAlert1.showAndWait();
 
-        // Process the result
         if (result1.isPresent() && result1.get() == ButtonType.OK) {
             System.out.println("User clicked OK");
             if (Objects.equals(resultArea.getText(), "")) {
                 System.out.println("Please insert Word!");
             } else {
-//                System.out.println(wordTargetArea.getText());
-
                 addNewWordToDataBase(Word, Type, Meaning, Pronunciation, Example, Synonym, Antonyms);
-//                addNewWordToDataBase("", "", "", "", "", "", "");
-
             }
-            // Do something when OK is clicked
         } else {
             System.out.println("User clicked Cancel or closed the dialog");
-            // Do something when Cancel or closed
         }
     }
 
+    /**
+     * Thêm từ vào từ điển Anh - Việt.
+     */
     public void addNewWordToDictionary(String wordTarget, String wordSound, String wordExplain) {
         if (DictionaryManagement.addWord(wordTarget, wordSound, wordExplain)) {
             System.out.println("Add word successfully");
         } else {
             System.out.println("Can't add word because word has been added");
         }
-
     }
+
 
     public void addNewWordToDataBase(String Word, String Type, String Meaning, String Pronunciation, String Example, String Synonym, String Antonyms) {
         try {
@@ -512,8 +466,8 @@ public class Scene2Controller extends DictionaryController implements Initializa
     private void searchButtonAction() {
         // Logic khi nút search được nhấn
         String searchTerm = searchField.getText();
-        SpeechAPI speechAPI =  new SpeechAPI();
-        speechAPI.speak("en",searchTerm);
+        SpeechAPI speechAPI = new SpeechAPI();
+        speechAPI.speak("en", searchTerm);
         try {
             Word result = performSearch(searchTerm);
             String result1 = DatabaseManager.searchWord(searchTerm);
@@ -544,9 +498,6 @@ public class Scene2Controller extends DictionaryController implements Initializa
 
     //
     private Word performSearch(String searchTerm) {
-        // Logic tìm kiếm từ
-
-
         // Thực hiện tìm kiếm các từ khớp với searchTerm
         Word result = DictionaryManagement.dictionaryLookup(searchTerm.trim());
 
