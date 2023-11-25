@@ -41,15 +41,5 @@
         <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="236.0" styleClass="class-button" text="Exit " />
     </VBox>
    <Pane prefHeight="200.0" prefWidth="200.0" />
-   <VBox prefHeight="200.0" prefWidth="100.0">
-      <children>
-         <Pane prefHeight="200.0" prefWidth="200.0" />
-         <Label text="Label" />
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="263.7366828918457" />
-         <TextFlow prefHeight="133.0" prefWidth="264.0" textAlignment="CENTER" />
-          <TextArea styleClass="transparent-text-area">
-              <TextArea prefHeight="200.0" prefWidth="200.0" styleClass="transparent-text-area" />
-          </TextArea>
-      </children>
-   </VBox>
+
 </HBox>

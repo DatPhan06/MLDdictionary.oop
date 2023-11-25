@@ -30,6 +30,10 @@
     /*-fx-control-inner-background: black;*/
 }
 
+.transparent-text-area .text-area {
+    -fx-control-inner-background: red;
+}
+
 Button {
     -fx-background-color : rgba(0, 0, 0, 0);
     -fx-padding : 5px 10px;
