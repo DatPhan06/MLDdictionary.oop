@@ -1,5 +1,6 @@
 package com.example.myjavafxapp.controller;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -52,6 +53,6 @@ public class ResultController {
      */
     public void closeResult(ActionEvent actionEvent) {
         // Thêm logic xử lý khi người dùng muốn đóng cửa sổ kết quả.
-
+        Platform.exit();
     }
 }

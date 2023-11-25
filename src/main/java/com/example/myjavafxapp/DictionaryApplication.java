@@ -15,29 +15,9 @@ public class DictionaryApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         DatabaseManager.createTable();
-//        SpeechAPI speechAPI =  new SpeechAPI();
-//        speechAPI.speak("Welcome to MLD Dictionary!");
+        SpeechAPI speechAPI =  new SpeechAPI();
 
-//        DatabaseManager.insertData("dog","n","chó","","","","");
-//        DatabaseManager.insertData("cat","n","mèo","","","","");
-//        DatabaseManager.insertData("bird","n","chim","","","","");
-
-
-//        try {
-//            //English to Vietnamese
-//            System.out.println(GoogleTranslate.translate("vi", "how are you"));
-//
-//            //English to GREEK
-//            System.out.println(GoogleTranslate.translate("vi", "hello brother"));
-//
-//            //English to HAUSA
-//            System.out.println(GoogleTranslate.translate("vi", "play game"));
-//
-//            //English to Yoruba
-//            System.out.println(GoogleTranslate.translate("vi", "english is very good"));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        speechAPI.speak("en"," Welcome to MLD dictionary");
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene1.fxml"));
         Parent root = loader.load();
@@ -54,14 +34,15 @@ public class DictionaryApplication extends Application {
     }
 
     public static void main(String[] args) {
-        SpeechAPI speechAPI =  new SpeechAPI();
-        speechAPI.speak("en","Welcome to MLD dictionary");
+
         try {
             DictionaryManagement.insertFromFile("src/main/resources/txt/dictionaryEVplus.txt");
             System.out.println("Import dictionary sucessfully. \n");
+
         } catch (Exception e) {
             System.out.println(e);
         }
+
         launch(args);
         DictionaryManagement.exportToFile("src/main/resources/txt/dictionaryEVout.txt");
 

@@ -9,6 +9,14 @@
     -fx-background-size: cover;
 }
 
+#resultArea {
+    -fx-font-weight: bold;
+    -fx-border-width: 0;
+    -fx-control-inner-background: #7F528B;
+    -fx-font-size: 20px;
+    -fx-text-fill: #FFFFFF;
+}
+
 #wordTargetArea {
     /*-fx-font-family: 'Poppins-Bold';*/
     -fx-font-weight: bold;

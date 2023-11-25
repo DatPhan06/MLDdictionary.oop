@@ -1,5 +1,6 @@
 package com.example.myjavafxapp.controller;
 
+import com.example.myjavafxapp.model.Game;
 import com.example.myjavafxapp.model.Word;
 import com.example.myjavafxapp.model.WordGame;
 import com.example.myjavafxapp.util.DictionaryManagement;
@@ -18,7 +19,7 @@ import javafx.util.Duration;
 import java.io.IOException;
 import java.util.List;
 
-public class WordGameController extends DictionaryController{
+public class WordGameController {
 
     @FXML
     private RadioButton optionA;
@@ -52,6 +53,7 @@ public class WordGameController extends DictionaryController{
     private Button exitButton;
 
     private Stage primaryStage;
+
 
     // Các phương thức và biến khác...
 

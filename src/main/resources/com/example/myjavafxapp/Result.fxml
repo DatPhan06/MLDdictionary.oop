@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.myjavafxapp.controller.ResultController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavafxapp.controller.ResultController">
 
     <VBox alignment="CENTER" spacing="20">
-        <Label text="Kết quả trò chơi" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
-        <Label fx:id="scoreLabel" style="-fx-font-size: 16px;"/>
-        <ListView fx:id="wrongAnswersListView" prefWidth="400" prefHeight="200"/>
-        <Button text="Đóng" onAction="#closeResult"/>
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Kết quả trò chơi" />
+        <Label fx:id="scoreLabel" style="-fx-font-size: 16px;" />
+        <ListView fx:id="wrongAnswersListView" prefHeight="250.0" prefWidth="694.0" />
+        <Button onAction="#closeResult" text="Đóng" />
     </VBox>
 
 </AnchorPane>

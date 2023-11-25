@@ -32,6 +32,8 @@ Dự án này cung cấp một loạt các tính năng hữu ích từ tra cứu
 
 # Các tính năng:
 - # Search: 
+![Search Image](demo/Test-Search.gif)
+
 - Bạn hãy nhập từ muốn tra vào mục searchField và sau đó ấn nút Search!
   + *Chúng tôi đã tích hợp phần Speech(phát âm từ) ngay trong nút Search*
   + Chúng tôi đã tích hợp 3 tính năng Add, Delete, Change để cải tiến từ điển.
@@ -39,16 +41,27 @@ Dự án này cung cấp một loạt các tính năng hữu ích từ tra cứu
   + Đối với phần từ điển Anh - Anh, bạn hãy ấn Search khi searchField trống để hiện ra form cần nhập vào, sau đó hãy nhập theo form cho trước sau đó lựa chọn nút của bạn.
   
 - # Translate:
+![Translate Image](demo/Test-Translate.gif)
+
   + Chúng tôi giúp bạn có thể dịch tự động từ bất kì ngôn ngữ nào ở trong phần inputTextArea.
   + Sau đó chọn ngôn ngữ kết quả mà bạn muốn dịch thành ở trong ChoiceBox và ấn nút Translate.
   + Kết quả sẽ được hiển thị ra ở resultTextArea, khi đó bạn chỉ cần ấn Speech và chúng tôi sẽ giúp bạn đọc toàn bộ văn bản.
 - # Game: 
+![Game Image](demo/Test-game.gif)
+
   + Chúng tôi có 50s đếm ngược, nhiệm vụ của bạn là hãy nhanh tay nhanh mắt đọc từ hiển thị trên màn hình và chọn nhanh 1 trong 4 đáp án để chọn ra đúng nghĩa của từ đã cho.
   + Mỗi lần trả lời đúng bạn sẽ được cộng 1 điểm.
   + Sau khi hoàn thành trò chơi tôi sẽ hiện ra điểm số của bạn và 1 bảng danh sách những câu bạn đã trả lời sai để bạn có thể học lại những từ đó 1 lần nữa.
 - # Grammar: 
+![Grammar Image](demo/Grammar.png)
+
   + Chúng tôi cung cấp một số ngữ pháp tiếng anh quan trọng.
 - # Vocabulary: 
+![Vocabulary Image](demo/Vocabulary.png)
+
   + Chúng tôi cung cấp một số từ vựng tiếng anh phổ biến nhất trong các lĩnh vực.
 - # Help:
   + Hỗ trợ bạn các button để hướng dẫn sử dụng
+    ![Help Image](demo/Help.png)
+
+![Game Image](demo/Test-Other.gif)
